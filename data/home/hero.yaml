@@ -1,13 +1,13 @@
 enable: true
 
-title: "How to **level up** your business"
-text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est faucibus tellus leo non pellentesque lorem vel. Arcu magna eros, potenti duis."
+title: "IT Support & System Solutions for Reliable Operations"
+text: "I help businesses and individuals troubleshoot systems, optimize networks, and deploy reliable infrastructure using modern tools like Docker, VPN, and monitoring solutions."
 
-buttons:
-  - label: "How we work"
-    link: "#"
+# buttons:
+#   - label: "View My Work"
+#     link: "/services/services"
 
-  - label: "Let's talk"
-    link: ""
+#   - label: "Contact Me"
+#     link: "/about/about"
 
 image: "images/hero-image.png"

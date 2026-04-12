@@ -1,6 +1,7 @@
-baseURL: "/"
-title: "Up Business"
+baseURL: "https://oldjerry.github.io"
+title: "Cozy Cafe Corner"
 summaryLength: 20
+publishDir: "docs"
 
 # services:
 #   googleAnalytics:

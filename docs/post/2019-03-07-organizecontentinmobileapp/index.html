@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    
+      <title>Three Ways to Organize Contents in a Mobile App | Cozy Cafe Corner</title>
+    
+
+
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+    
+    
+      
+    
+    <meta name="description" content="" />
+
+    
+    
+    <meta property="og:url" content="https://oldjerry.github.io/post/2019-03-07-organizecontentinmobileapp/">
+  <meta property="og:site_name" content="Cozy Cafe Corner">
+  <meta property="og:title" content="Three Ways to Organize Contents in a Mobile App">
+  <meta property="og:description" content="List-Detail View and Cards are common modes for show content pages for mobile websites &amp; apps. I summarized 3 forms in different types that are I have used in my projects.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2019-03-07T11:22:45+00:00">
+    <meta property="article:modified_time" content="2019-03-07T11:22:45+00:00">
+    <meta property="article:tag" content="Front End">
+    <meta property="article:tag" content="Full Stack">
+    <meta property="og:image" content="https://oldjerry.github.io/images/hero-image.png">
+
+    
+  <meta itemprop="name" content="Three Ways to Organize Contents in a Mobile App">
+  <meta itemprop="description" content="List-Detail View and Cards are common modes for show content pages for mobile websites &amp; apps. I summarized 3 forms in different types that are I have used in my projects.">
+  <meta itemprop="datePublished" content="2019-03-07T11:22:45+00:00">
+  <meta itemprop="dateModified" content="2019-03-07T11:22:45+00:00">
+  <meta itemprop="wordCount" content="304">
+  <meta itemprop="image" content="https://oldjerry.github.io/images/hero-image.png">
+  <meta itemprop="keywords" content="Front End,Full Stack">
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://oldjerry.github.io/images/hero-image.png">
+  <meta name="twitter:title" content="Three Ways to Organize Contents in a Mobile App">
+  <meta name="twitter:description" content="List-Detail View and Cards are common modes for show content pages for mobile websites &amp; apps. I summarized 3 forms in different types that are I have used in my projects.">
+
+
+
+    
+    
+      <link rel="icon" type="image/x-icon" href="https://oldjerry.github.io/favicon.ico" />
+    
+
+    
+
+    
+
+    
+
+    
+      <link rel="manifest" href="https://oldjerry.github.io/site.webmanifest" />
+    
+
+    
+
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    
+    
+    
+      
+        
+          
+          
+            <link
+              rel="stylesheet"
+              href="/css/styles.b587c8302f422e971d3196183262151ced4a4ac4702e111a097f5a89c355ef76.css"
+              integrity="sha256-tYfIMC9CLpcdMZYYMmIVHO1KSsRwLhEaCX9aicNV73Y="
+              crossorigin="anonymous"
+            />
+          
+        
+      
+    
+
+
+    
+    
+      
+        
+        
+          <link rel="stylesheet" href="/css/fonts.6252fd3e4c6edf8f71c1ac1f7b4042be374d5267b7f6b6cbb30e66d0865c588c.css" integrity="sha256-YlL9Pkxu349xwawfe0BCvjdNUme39rbLsw5m0IZcWIw=" crossorigin="anonymous" />
+        
+      
+    
+
+
+    
+        
+      
+      <script src="/js/main.7b57960741aab0c5345ed2de96e3271beece68496732534388fb608dad5f5490.min.js" defer></script>
+    
+  </head>
+  <body class="">
+    <div class="flex min-h-screen flex-col">
+      <nav class="">
+  <div class="container mx-auto flex items-center justify-between px-4 py-6">
+    <a class="flex items-center" href="https://oldjerry.github.io/">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<img
+  src="https://oldjerry.github.io/images/logo.png"
+  width="500"
+  height="500"
+  
+  
+  class="size-6 xl:size-8"
+  alt="map[class:size-6 xl:size-8 src:images/logo.png]"
+/>
+
+      <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+    </a>
+    <button
+      class="cursor-pointer xl:hidden"
+      type="button"
+      data-toggle-target="#navbarContent"
+      data-toggle-class="-translate-y-full"
+      aria-label="Toggle Navigation"
+    >
+      <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+  />
+</svg>
+
+
+    </button>
+    <div
+      class="fixed inset-0 flex -translate-y-full flex-col items-center justify-center gap-8 bg-white duration-500 xl:relative xl:translate-y-0 xl:flex-row"
+      id="navbarContent"
+    >
+      <div class="container absolute top-0 mx-auto flex items-center justify-between px-4 py-6 xl:hidden">
+        <a class="flex items-center xl:hidden" href="https://oldjerry.github.io/">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<img
+  src="https://oldjerry.github.io/images/logo.png"
+  width="500"
+  height="500"
+  
+  
+  class="size-6 xl:size-8"
+  alt="map[class:size-6 xl:size-8 src:images/logo.png]"
+/>
+
+          <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+        </a>
+        <button
+          class="cursor-pointer xl:hidden"
+          type="button"
+          data-toggle-target="#navbarContent"
+          data-toggle-class="-translate-y-full"
+          aria-label="Toggle Navigation"
+        >
+          <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
+
+        </button>
+      </div>
+      <ul class="flex flex-col gap-8 xl:flex-row">
+        
+          <li class="text-center">
+            <a class="text-primary" href="/#hero">Home</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/services/services">Services</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/blog">Blog</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/about/about">About</a>
+          </li>
+        
+      </ul>
+      <ul class="flex flex-col gap-8 xl:flex-row">
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      <div class="grow">
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      
+        <h2 class="text-primary mb-16 text-center text-6xl font-bold">Three Ways to Organize Contents in a Mobile App</h2>
+      
+      
+      
+        <div class="prose prose-lg mx-auto">
+          <p>List-Detail View and Cards are common modes for show content pages for mobile websites &amp; apps. I summarized 3 forms in different types that are I have used in my projects.</p>
+<h3 id="standard-listview--detailview">Standard ListView &amp; DetailView</h3>
+<p>This is a basic mode that can be used in a variety of situations, I used it in a news app of a Chinese customer. Because the news usually contains a lot of text and image, using a separate detailview page is a simple way. In this case, I send the news ID from the news list to the detail page when user click the list item, and the detail page get the news content when it is showing.</p>
+<p><a href="https://postimg.cc/Vdht6yjH"><img src="https://i.postimg.cc/VkfWKm51/listview1.gif" alt="listview1.gif"></a></p>
+<h3 id="flip-card-in-listview">Flip Card in ListView</h3>
+<p>It is an advertising poster app of a Chinese customer, most of the content is on the poster and a little bit of info need to be describe in text. So I decided to use the flip mode in the ListView, improve user experience by reducing features. This app is written by React, I forked the <a href="https://github.com/AaronCCWong/react-card-flip">react-card-flip</a> component and adapted some codes in my project.</p>
+<p><a href="https://postimg.cc/nMHBSGFT"><img src="https://i.postimg.cc/XN5LJsTM/listview2.gif" alt="listview2.gif"></a></p>
+<h3 id="card-view-like-ios-appstore">Card view like iOS AppStore</h3>
+<p>The third is a real estate info app of a US customer. This project started shortly after the new iOS 11 App Store, I really like the style so I tried it with a wonderful component  <a href="https://github.com/PaoloCuscela/Cards">Cards</a>. unfortunately, this project was canceled by customer, the screenshot is an early prototype, and this component is still not fully applicable in iOS 12.</p>
+<p><a href="https://postimg.cc/G8RGCkkL"><img src="https://i.postimg.cc/Ss2rcdRM/listview3.gif" alt="listview3.gif"></a></p>
+<h3 id="conclusion">Conclusion</h3>
+<p>There are more personalized experiences in web and mobile apps than web pages. And Cards are the new creative concept what can improve the UX aspect. Using cards would create more interesting interaction methods, so card-style design is increasing in popularity.</p>
+<p>There is more info about <a href="http://babich.biz/using-card-based-design-to-enhance-ux/">Card-Based Design</a> can be used as a guide.</p>
+
+        </div>
+      
+    </div>
+  </section>
+</div>
+      <footer class="bg-tertiary/25 py-16">
+  <div class="container mx-auto px-4">
+    <div class="mb-8 grid gap-8 xl:grid-cols-12">
+      <div class="flex flex-col items-center gap-4 xl:col-span-4 xl:items-start">
+        <a class="flex items-center" href="https://oldjerry.github.io/">
+          <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+        </a>
+        <p class="text-center text-sm xl:text-start">We specialize in providing services to desing websites, applications, build and maintain business for customers.</p>
+        
+      </div>
+      <div class="xl:col-span-2">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">About us</h2>
+        <ul class="flex flex-col gap-1 text-sm">
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/#hero">Home</a>
+            </li>
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/services/services">Services</a>
+            </li>
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/blog">Blog</a>
+            </li>
+          
+        </ul>
+      </div>
+      <div class="xl:col-span-3">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">Location</h2>
+        <ul class="flex flex-col gap-3 text-sm">
+          
+            <li class="flex flex-col items-center gap-4 xl:flex-row">
+              <span class="text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg>
+</span>
+              <span class="text-center xl:text-start">Richmond, BC, Canada</span>
+            </li>
+          
+        </ul>
+      </div>
+      <div class="xl:col-span-3">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">Contact Us</h2>
+        <ul class="flex flex-col gap-1 text-sm">
+          
+            <li class="text-center xl:text-start">jerrysun.work@hotmail.com</li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-sm">
+      <div class="">
+        
+          <p class="">© 2026 Cozy Cafe Corner All Rights Reserved</p>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>

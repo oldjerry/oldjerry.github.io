@@ -1,38 +1,29 @@
 enable: true
 
 items:
-  - image: "images/portfolio-ecommerce.png"
-    pretitle: "Portfolio Service"
-    title: "We developed an eCommerce website"
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed euismod quis sit gravida pharetra sit. Cursus vel enim pretium vulputate semper sem elit magna neque. Aliquet adipisc."
+  - image: "images/troubleshooting.png"
+    pretitle: "Case Study"
+    title: "System Troubleshooting & Recovery"
+    text: "Diagnosed and resolved critical system issues, reducing downtime and restoring business operations efficiently."
+    buttons: 
+      - label: "Read more"
+        link: "/post/2026-03-01-troubleshooting"
+
+  - image: "images/networking.png"
+    pretitle: "Case Study"
+    title: "Secure Remote Access Solution with WireGuard"
+    text: "Designed and deployed a VPN solution for remote device access, improving network security and connectivity stability."
 
     buttons: 
-      - label: "See live"
-        link: "#"
-
       - label: "Read more"
-        link: "#"
+        link: "/post/2026-02-06-wireguard"
 
-  - image: "images/portfolio-ecommerce.png"
-    pretitle: "Portfolio Service"
-    title: "We developed an eCommerce website"
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed euismod quis sit gravida pharetra sit. Cursus vel enim pretium vulputate semper sem elit magna neque. Aliquet adipisc."
-
+  - image: "images/programming.png"
+    pretitle: "Case Study"
+    title: "Docker-based Service Deployment"
+    text: "Built and managed containerized services for monitoring and network tools, improving system scalability and maintainability."
     buttons: 
-      - label: "See live"
-        link: "#"
-
       - label: "Read more"
-        link: "#"
+        link: "/post/2019-03-06-dockeronvps"
 
-  - image: "images/portfolio-ecommerce.png"
-    pretitle: "Portfolio Service"
-    title: "We developed an eCommerce website"
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed euismod quis sit gravida pharetra sit. Cursus vel enim pretium vulputate semper sem elit magna neque. Aliquet adipisc."
 
-    buttons: 
-      - label: "See live"
-        link: "#"
-
-      - label: "Read more"
-        link: "#"

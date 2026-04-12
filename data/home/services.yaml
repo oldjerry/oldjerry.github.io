@@ -1,25 +1,25 @@
 enable: true
 
-title: "Our main services"
-text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec quam nibh elit pellentesque velit netus suspendisse. Sed enim, pretium, montes, in ut dolor urna."
+title: "Services"
+text: "Reliable IT support, system troubleshooting, and practical technical solutions."
 cards:
   - image: "images/services-web-development.png"
-    title: "Web development"
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie in malesuada eget fames purus ligula luctus tellus. Habitant condimentum sit gravida praesent. "
+    title: "IT Support & Troubleshooting"
+    text: "Diagnose and resolve system, server, and network issues with a structured and efficient approach."
     button:
       label: "Learn more"
-      link: "#"
+      link: "/services/services"
 
   - image: "images/services-web-development.png"
-    title: "Web development"
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie in malesuada eget fames purus ligula luctus tellus. Habitant condimentum sit gravida praesent. "
+    title: "System & Cloud Deployment"
+    text: "Build and maintain containerized services for applications, monitoring systems, local and cloud environments."
     button:
       label: "Learn more"
-      link: "#"
+      link: "/services/services"
 
   - image: "images/services-web-development.png"
-    title: "Web development"
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie in malesuada eget fames purus ligula luctus tellus. Habitant condimentum sit gravida praesent. "
+    title: "Network & VPN Setup"
+    text: "Design and deploy secure remote access solutions using WireGuard, OpenWrt, and custom routing setups."
     button:
       label: "Learn more"
-      link: "#"
+      link: "/services/services"

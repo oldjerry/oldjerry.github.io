@@ -1,28 +1,26 @@
-title: "Up Business"
+title: "Cozy Cafe Corner"
 description: "We specialize in providing services to desing websites, applications, build and maintain business for customers."
 images: 
   - "images/hero-image.png"
 
-logo: "arrow-up.png"
+logo: "logo.png"
 
 favicons:
   themeColor: "#FFFFFF"
   backgroundColor: "#FFFFFF"
   faviconColor: "#000000"
 
-social:
-  dribbble: "#"
-  instagram: "#"
-  facebook: "#"
-  twitter: "#"
+# social:
+#   dribbble: "#"
+#   instagram: "#"
+#   facebook: "#"
+#   twitter: "#"
 
 location:
-  - "3891 Ranchview Dr. Richardson, California 62639"
-  - "4517 Washington Ave. Manchester, Kentucky 39495"
+  - "Richmond, BC, Canada"
 
 contact:
-  - "trungkienspktnd@gamail.com"
-  - "207.555.0119"
+  - "jerrysun.work@hotmail.com"
 
-copyright: "© 2022 Up Business All Rights Reserved"
+copyright: "© 2026 Cozy Cafe Corner All Rights Reserved"
 

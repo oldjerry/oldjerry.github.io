@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    
+      <title>Install and Use Docker on ( DigitalOcean) VPS | Cozy Cafe Corner</title>
+    
+
+
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+    
+    
+      
+    
+    <meta name="description" content="" />
+
+    
+    
+    <meta property="og:url" content="https://oldjerry.github.io/post/2019-03-06-dockeronvps/">
+  <meta property="og:site_name" content="Cozy Cafe Corner">
+  <meta property="og:title" content="Install and Use Docker on ( DigitalOcean) VPS">
+  <meta property="og:description" content="Why use Docker Docker can efficiently deploy a service environment, such as completing a web site in a few minutes, including a web server, front end, and database for hosting a web site. Meanwhile, avoid conflicting dependencies by using separate containers for each component of an application. Docker makes it easy to maintain and transfer, especially when deployed in the cloud.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2019-03-06T10:17:09+00:00">
+    <meta property="article:modified_time" content="2019-03-06T10:17:09+00:00">
+    <meta property="article:tag" content="DevOps">
+    <meta property="og:image" content="https://oldjerry.github.io/images/hero-image.png">
+
+    
+  <meta itemprop="name" content="Install and Use Docker on ( DigitalOcean) VPS">
+  <meta itemprop="description" content="Why use Docker Docker can efficiently deploy a service environment, such as completing a web site in a few minutes, including a web server, front end, and database for hosting a web site. Meanwhile, avoid conflicting dependencies by using separate containers for each component of an application. Docker makes it easy to maintain and transfer, especially when deployed in the cloud.">
+  <meta itemprop="datePublished" content="2019-03-06T10:17:09+00:00">
+  <meta itemprop="dateModified" content="2019-03-06T10:17:09+00:00">
+  <meta itemprop="wordCount" content="661">
+  <meta itemprop="image" content="https://oldjerry.github.io/images/hero-image.png">
+  <meta itemprop="keywords" content="DevOps">
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://oldjerry.github.io/images/hero-image.png">
+  <meta name="twitter:title" content="Install and Use Docker on ( DigitalOcean) VPS">
+  <meta name="twitter:description" content="Why use Docker Docker can efficiently deploy a service environment, such as completing a web site in a few minutes, including a web server, front end, and database for hosting a web site. Meanwhile, avoid conflicting dependencies by using separate containers for each component of an application. Docker makes it easy to maintain and transfer, especially when deployed in the cloud.">
+
+
+
+    
+    
+      <link rel="icon" type="image/x-icon" href="https://oldjerry.github.io/favicon.ico" />
+    
+
+    
+
+    
+
+    
+
+    
+      <link rel="manifest" href="https://oldjerry.github.io/site.webmanifest" />
+    
+
+    
+
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    
+    
+    
+      
+        
+          
+          
+            <link
+              rel="stylesheet"
+              href="/css/styles.b587c8302f422e971d3196183262151ced4a4ac4702e111a097f5a89c355ef76.css"
+              integrity="sha256-tYfIMC9CLpcdMZYYMmIVHO1KSsRwLhEaCX9aicNV73Y="
+              crossorigin="anonymous"
+            />
+          
+        
+      
+    
+
+
+    
+    
+      
+        
+        
+          <link rel="stylesheet" href="/css/fonts.6252fd3e4c6edf8f71c1ac1f7b4042be374d5267b7f6b6cbb30e66d0865c588c.css" integrity="sha256-YlL9Pkxu349xwawfe0BCvjdNUme39rbLsw5m0IZcWIw=" crossorigin="anonymous" />
+        
+      
+    
+
+
+    
+        
+      
+      <script src="/js/main.7b57960741aab0c5345ed2de96e3271beece68496732534388fb608dad5f5490.min.js" defer></script>
+    
+  </head>
+  <body class="">
+    <div class="flex min-h-screen flex-col">
+      <nav class="">
+  <div class="container mx-auto flex items-center justify-between px-4 py-6">
+    <a class="flex items-center" href="https://oldjerry.github.io/">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<img
+  src="https://oldjerry.github.io/images/logo.png"
+  width="500"
+  height="500"
+  
+  
+  class="size-6 xl:size-8"
+  alt="map[class:size-6 xl:size-8 src:images/logo.png]"
+/>
+
+      <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+    </a>
+    <button
+      class="cursor-pointer xl:hidden"
+      type="button"
+      data-toggle-target="#navbarContent"
+      data-toggle-class="-translate-y-full"
+      aria-label="Toggle Navigation"
+    >
+      <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+  />
+</svg>
+
+
+    </button>
+    <div
+      class="fixed inset-0 flex -translate-y-full flex-col items-center justify-center gap-8 bg-white duration-500 xl:relative xl:translate-y-0 xl:flex-row"
+      id="navbarContent"
+    >
+      <div class="container absolute top-0 mx-auto flex items-center justify-between px-4 py-6 xl:hidden">
+        <a class="flex items-center xl:hidden" href="https://oldjerry.github.io/">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<img
+  src="https://oldjerry.github.io/images/logo.png"
+  width="500"
+  height="500"
+  
+  
+  class="size-6 xl:size-8"
+  alt="map[class:size-6 xl:size-8 src:images/logo.png]"
+/>
+
+          <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+        </a>
+        <button
+          class="cursor-pointer xl:hidden"
+          type="button"
+          data-toggle-target="#navbarContent"
+          data-toggle-class="-translate-y-full"
+          aria-label="Toggle Navigation"
+        >
+          <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
+
+        </button>
+      </div>
+      <ul class="flex flex-col gap-8 xl:flex-row">
+        
+          <li class="text-center">
+            <a class="text-primary" href="/#hero">Home</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/services/services">Services</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/blog">Blog</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/about/about">About</a>
+          </li>
+        
+      </ul>
+      <ul class="flex flex-col gap-8 xl:flex-row">
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      <div class="grow">
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      
+        <h2 class="text-primary mb-16 text-center text-6xl font-bold">Install and Use Docker on ( DigitalOcean) VPS</h2>
+      
+      
+      
+        <div class="prose prose-lg mx-auto">
+          <h3 id="why-use-docker">Why use Docker</h3>
+<p>Docker can efficiently deploy a service environment, such as completing a web site in a few minutes, including a web server, front end, and database for hosting a web site. Meanwhile, avoid conflicting dependencies by using separate containers for each component of an application. Docker makes it easy to maintain and transfer, especially when deployed in the cloud.</p>
+<p>In this case I built a simple webserver in Docker with Python, and Running it in the DigitalOcean VPS.</p>
+<h3 id="step-1---create-vps-project">Step 1 - Create VPS Project</h3>
+<ol>
+<li>
+<p>Choose an data center</p>
+<p>Use the <a href="http://speedtest-sfo1.digitalocean.com">speed test site</a> to test the speed of different data centers, because my customers are in China, I chose the fastest SFO1 data center. Because my customers are in China, I chose the fastest SFO1 data center. Use the services provided by DO to easily migrate to other data center, if needed later.</p>
+<p><a href="https://postimg.cc/bZkS6svT"><img src="https://i.postimg.cc/zGPwGhZ9/1.png" alt="1.png"></a></p>
+</li>
+<li>
+<p>Choose an image</p>
+<p>In order to use more services flexibly on the VPS, I started with the basic linux distribution. DO offers different Linux distributions, for example Ubuntu, FreeBSD, Fedora, Debian, and CentOS. I personally would normally recommend the newest versions of CentOS like 7.5 x64.</p>
+<p><a href="https://postimg.cc/Y47GTMGw"><img src="https://i.postimg.cc/TPLVLPTh/2.png" alt="2.png"></a></p>
+</li>
+</ol>
+<h3 id="step-2---initial--centos-server-setup">Step 2 - Initial  CentOS Server Setup</h3>
+<p><a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-centos-7">Refer to this tutorial from the DO Community</a></p>
+<ol>
+<li>
+<p>Root Login</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>local$ssh root@SERVER_IP_ADDRESS
+</span></span></code></pre></div></li>
+<li>
+<p>Create a New User</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$adduser sysadmin
+</span></span><span style="display:flex;"><span>$passwd sysadmin
+</span></span><span style="display:flex;"><span>$gpasswd -a sysadmin wheel
+</span></span></code></pre></div></li>
+<li>
+<p>Add Public Key Authentication</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>local$ssh-keygen
+</span></span><span style="display:flex;"><span>local$ssh-copy-id sysadmin@SERVER_IP_ADDRESS
+</span></span></code></pre></div></li>
+<li>
+<p>Configure SSH Daemon</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$vi /etc/ssh/sshd_config
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;...&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;#PermitRootLogin yes -&gt; PermitRootLogin no&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;...&#39;</span>
+</span></span><span style="display:flex;"><span>$systemctl reload sshd
+</span></span><span style="display:flex;"><span>or 
+</span></span><span style="display:flex;"><span>$sudo systemctl restart sshd.service
+</span></span></code></pre></div></li>
+<li>
+<p>Login with new user</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>local$ssh sysadmin@SERVER_IP_ADDRESS
+</span></span><span style="display:flex;"><span>$sudo command_to_run
+</span></span><span style="display:flex;"><span>$exit
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="step-3---install-docker-and-deploy-servers">Step 3 - Install Docker and Deploy Servers</h3>
+<ol>
+<li>
+<p>Prepare System</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$sudo yum check-update
+</span></span><span style="display:flex;"><span>$sudo yum -y update
+</span></span><span style="display:flex;"><span>$sudo yum -y install mc
+</span></span></code></pre></div></li>
+<li>
+<p>Deploy Google BBR</p>
+<p>Linux Kernel 4.9 comes with improved BBR congestion control algorithms. BBR has significantly increased throughput and reduced latency for connections, that means that your shared network speed is going up.</p>
+<ul>
+<li>
+<p>Upgrade Linux Kernel to the latest version</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$sudo rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+</span></span><span style="display:flex;"><span>$sudo rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
+</span></span><span style="display:flex;"><span>$sudo yum --enablerepo<span style="color:#f92672">=</span>elrepo-kernel install kernel-ml -y
+</span></span></code></pre></div></li>
+<li>
+<p>Confirm the result</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$rpm -qa | grep kernel
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kernel-ml-4.16.0-1.el7.elrepo.x86_64
+</span></span><span style="display:flex;"><span>kernel-3.10.0-514.el7.x86_64
+</span></span><span style="display:flex;"><span>kernel-tools-libs-3.10.0-514.2.2.el7.x86_64
+</span></span><span style="display:flex;"><span>kernel-tools-3.10.0-514.2.2.el7.x86_64
+</span></span><span style="display:flex;"><span>kernel-3.10.0-514.2.2.el7.x86_64
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$sudo awk -F<span style="color:#ae81ff">\&#39;</span> <span style="color:#e6db74">&#39;$1==&#34;menuentry &#34; {print i++ &#34; : &#34; $2}&#39;</span> /etc/grub2.cfg
+</span></span></code></pre></div><p>or:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$sudo egrep ^menuentry /etc/grub2.cfg | cut -f <span style="color:#ae81ff">2</span> -d <span style="color:#ae81ff">\&#39;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#ae81ff">0</span> : CentOS Linux <span style="color:#f92672">(</span>4.16.0-1.el7.elrepo.x86_64<span style="color:#f92672">)</span> <span style="color:#ae81ff">7</span> <span style="color:#f92672">(</span>Core<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> : CentOS Linux <span style="color:#f92672">(</span>3.10.0-514.2.2.el7.x86_64<span style="color:#f92672">)</span> <span style="color:#ae81ff">7</span> <span style="color:#f92672">(</span>Core<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span> : CentOS Linux <span style="color:#f92672">(</span>3.10.0-327.36.3.el7.x86_64<span style="color:#f92672">)</span> <span style="color:#ae81ff">7</span> <span style="color:#f92672">(</span>Core<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span> : CentOS Linux, with Linux 3.10.0-123.el7.x86_64
+</span></span></code></pre></div></li>
+<li>
+<p>Enable the 4.16.0 kernel by setting up the default grub2 boot entry</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$sudo grub2-set-default <span style="color:#ae81ff">0</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Reboot and Check</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$sudo reboot
+</span></span><span style="display:flex;"><span>$sudo uname -r
+</span></span><span style="display:flex;"><span>4.16.3-1.el7.elrepo.x86_64
+</span></span></code></pre></div></li>
+<li>
+<p>Enable BBR</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$echo <span style="color:#e6db74">&#39;net.core.default_qdisc=fq&#39;</span> | sudo tee -a /etc/sysctl.conf
+</span></span><span style="display:flex;"><span>$echo <span style="color:#e6db74">&#39;net.ipv4.tcp_congestion_control=bbr&#39;</span> | sudo tee -a /etc/sysctl.conf
+</span></span><span style="display:flex;"><span>sudo sysctl -p
+</span></span></code></pre></div></li>
+<li>
+<p>Confirm that BBR is enabled</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$sudo sysctl net.ipv4.tcp_available_congestion_control
+</span></span><span style="display:flex;"><span>net.ipv4.tcp_available_congestion_control <span style="color:#f92672">=</span> bbr cubic reno
+</span></span><span style="display:flex;"><span>$sudo sysctl -n net.ipv4.tcp_congestion_control
+</span></span><span style="display:flex;"><span>bbr
+</span></span><span style="display:flex;"><span>$lsmod | grep bbr
+</span></span><span style="display:flex;"><span>tcp_bbr
+</span></span></code></pre></div></li>
+<li>
+<p>Test the network performance enhancement (optional)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$sudo yum install httpd -y
+</span></span><span style="display:flex;"><span>$sudo systemctl start httpd.service
+</span></span><span style="display:flex;"><span>$sudo firewall-cmd --zone<span style="color:#f92672">=</span>public --permanent --add-service<span style="color:#f92672">=</span>http
+</span></span><span style="display:flex;"><span>$sudo firewall-cmd --reload
+</span></span><span style="display:flex;"><span>$cd /var/www/html
+</span></span><span style="display:flex;"><span>$sudo dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero of<span style="color:#f92672">=</span>500mb.zip bs<span style="color:#f92672">=</span>1024k count<span style="color:#f92672">=</span><span style="color:#ae81ff">500</span>
+</span></span></code></pre></div><p>Finally, visit the URL <code>http://[your-server-IP]/500mb.zip</code> from a web browser on desktop computer.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Install Docker &amp; Docker-Compose</p>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-centos-7">Refer to this tutorial from the DO Community</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$sudo curl -fsSL https://get.docker.com/ | sh
+</span></span><span style="display:flex;"><span>$sudo systemctl start docker
+</span></span><span style="display:flex;"><span>$sudo systemctl status docker
+</span></span><span style="display:flex;"><span>$sudo systemctl enable docker
+</span></span><span style="display:flex;"><span>$sudo usermod -aG docker <span style="color:#66d9ef">$(</span>whoami<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>$docker
+</span></span><span style="display:flex;"><span>$sudo -i
+</span></span><span style="display:flex;"><span>$curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-<span style="color:#e6db74">`</span>uname -s<span style="color:#e6db74">`</span>-<span style="color:#e6db74">`</span>uname -m<span style="color:#e6db74">`</span> -o /usr/local/bin/docker-compose
+</span></span><span style="display:flex;"><span>$chmod +x /usr/local/bin/docker-compose
+</span></span></code></pre></div></li>
+<li>
+<p>Create &amp; Deployment a Server with Docker Compose</p>
+<p>In this case, I built a Web Server with Django/PostgreSQL/Caddy with <a href="https://cookiecutter-django.readthedocs.io/en/latest/index.html">Cookiecutter Django</a> templates, following the chapters <a href="https://cookiecutter-django.readthedocs.io/en/latest/developing-locally-docker.html#">Getting Up and Running Locally With Docker</a> and <a href="https://cookiecutter-django.readthedocs.io/en/latest/deployment-with-docker.html#">
+Deployment with Docker</a> to made this small project easy to run . If necessary, I will collect and share more about how to use docker.</p>
+</li>
+</ol>
+<h3 id="conclusion">Conclusion</h3>
+<p>Docker is useful in numerous ways, and setting up Docker on VPS is fairly easy. I like to set up the docker development environment on my mac os, which makes it easy to isolate different projects and facilitate deployment to the test and production environment on vps.</p>
+
+        </div>
+      
+    </div>
+  </section>
+</div>
+      <footer class="bg-tertiary/25 py-16">
+  <div class="container mx-auto px-4">
+    <div class="mb-8 grid gap-8 xl:grid-cols-12">
+      <div class="flex flex-col items-center gap-4 xl:col-span-4 xl:items-start">
+        <a class="flex items-center" href="https://oldjerry.github.io/">
+          <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+        </a>
+        <p class="text-center text-sm xl:text-start">We specialize in providing services to desing websites, applications, build and maintain business for customers.</p>
+        
+      </div>
+      <div class="xl:col-span-2">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">About us</h2>
+        <ul class="flex flex-col gap-1 text-sm">
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/#hero">Home</a>
+            </li>
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/services/services">Services</a>
+            </li>
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/blog">Blog</a>
+            </li>
+          
+        </ul>
+      </div>
+      <div class="xl:col-span-3">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">Location</h2>
+        <ul class="flex flex-col gap-3 text-sm">
+          
+            <li class="flex flex-col items-center gap-4 xl:flex-row">
+              <span class="text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg>
+</span>
+              <span class="text-center xl:text-start">Richmond, BC, Canada</span>
+            </li>
+          
+        </ul>
+      </div>
+      <div class="xl:col-span-3">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">Contact Us</h2>
+        <ul class="flex flex-col gap-1 text-sm">
+          
+            <li class="text-center xl:text-start">jerrysun.work@hotmail.com</li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-sm">
+      <div class="">
+        
+          <p class="">© 2026 Cozy Cafe Corner All Rights Reserved</p>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>

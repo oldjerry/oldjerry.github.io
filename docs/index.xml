@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cozy Cafe Corner</title>
+    <link>https://oldjerry.github.io/</link>
+    <description>Recent content on Cozy Cafe Corner</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://oldjerry.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Secure Remote Access with WireGuard and OpenWrt</title>
+      <link>https://oldjerry.github.io/post/2026-02-06-wireguard/</link>
+      <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://oldjerry.github.io/post/2026-02-06-wireguard/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;This project focused on building a secure and flexible remote access solution using WireGuard and OpenWrt.&lt;/p&gt;&#xA;&lt;p&gt;The goal was to enable reliable remote access to devices and services while maintaining network security and allowing selected traffic to be routed through a VPN connection when needed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Small Business IT Infrastructure: Practical Setup and Best Practices</title>
+      <link>https://oldjerry.github.io/post/2026-03-16-itinfrastructure/</link>
+      <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://oldjerry.github.io/post/2026-03-16-itinfrastructure/</guid>
+      <description>&lt;h2 id=&#34;why-it-infrastructure-matters-for-small-businesses&#34;&gt;Why IT Infrastructure Matters for Small Businesses&lt;/h2&gt;&#xA;&lt;p&gt;For small businesses, IT infrastructure is not just about having computers and internet access. It directly affects productivity, customer service, security, and business continuity.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>System Troubleshooting &amp; Recovery in Critical Business Environments</title>
+      <link>https://oldjerry.github.io/post/2026-03-01-troubleshooting/</link>
+      <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://oldjerry.github.io/post/2026-03-01-troubleshooting/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;In business environments, system issues can directly affect daily operations, employee productivity, and customer service.&lt;/p&gt;&#xA;&lt;p&gt;Over the years, I have worked on troubleshooting and recovering a wide range of production issues, including application failures, system instability, network interruptions, and infrastructure-related incidents.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Three Ways to Organize Contents in a Mobile App</title>
+      <link>https://oldjerry.github.io/post/2019-03-07-organizecontentinmobileapp/</link>
+      <pubDate>Thu, 07 Mar 2019 11:22:45 +0000</pubDate>
+      <guid>https://oldjerry.github.io/post/2019-03-07-organizecontentinmobileapp/</guid>
+      <description>&lt;p&gt;List-Detail View and Cards are common modes for show content pages for mobile websites &amp;amp; apps. I summarized 3 forms in different types that are I have used in my projects.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Install and Use Docker on ( DigitalOcean) VPS</title>
+      <link>https://oldjerry.github.io/post/2019-03-06-dockeronvps/</link>
+      <pubDate>Wed, 06 Mar 2019 10:17:09 +0000</pubDate>
+      <guid>https://oldjerry.github.io/post/2019-03-06-dockeronvps/</guid>
+      <description>&lt;h3 id=&#34;why-use-docker&#34;&gt;Why use Docker&lt;/h3&gt;&#xA;&lt;p&gt;Docker can efficiently deploy a service environment, such as completing a web site in a few minutes, including a web server, front end, and database for hosting a web site. Meanwhile, avoid conflicting dependencies by using separate containers for each component of an application. Docker makes it easy to maintain and transfer, especially when deployed in the cloud.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hi, I am Jerry</title>
+      <link>https://oldjerry.github.io/about/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://oldjerry.github.io/about/about/</guid>
+      <description>&lt;h2 id=&#34;about-me&#34;&gt;About Me&lt;/h2&gt;&#xA;&lt;p&gt;I am a Support Engineer and Software Developer with over 15 years of experience working across enterprise IT systems, business applications, and production environments.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Technical Services</title>
+      <link>https://oldjerry.github.io/services/services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://oldjerry.github.io/services/services/</guid>
+      <description>&lt;p&gt;I provide practical IT support and technical solutions for individuals, small businesses, and teams who need reliable help with systems, networks, and applications.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

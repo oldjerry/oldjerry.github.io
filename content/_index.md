@@ -1,3 +1,3 @@
 ---
-title: "Up Business"
+title: "Cozy Cafe Corner"
 ---

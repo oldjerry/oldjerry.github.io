@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Full Stack on Cozy Cafe Corner</title>
+    <link>https://oldjerry.github.io/tags/full-stack/</link>
+    <description>Recent content in Full Stack on Cozy Cafe Corner</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Mar 2019 11:22:45 +0000</lastBuildDate>
+    <atom:link href="https://oldjerry.github.io/tags/full-stack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Three Ways to Organize Contents in a Mobile App</title>
+      <link>https://oldjerry.github.io/post/2019-03-07-organizecontentinmobileapp/</link>
+      <pubDate>Thu, 07 Mar 2019 11:22:45 +0000</pubDate>
+      <guid>https://oldjerry.github.io/post/2019-03-07-organizecontentinmobileapp/</guid>
+      <description>&lt;p&gt;List-Detail View and Cards are common modes for show content pages for mobile websites &amp;amp; apps. I summarized 3 forms in different types that are I have used in my projects.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
