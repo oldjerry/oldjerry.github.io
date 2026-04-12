@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevOps on Cozy Cafe Corner</title>
-    <link>https://oldjerry.github.io/tags/devops/</link>
+    <link>https://cozycafecorner.com/tags/devops/</link>
     <description>Recent content in DevOps on Cozy Cafe Corner</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 06 Mar 2019 10:17:09 +0000</lastBuildDate>
-    <atom:link href="https://oldjerry.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cozycafecorner.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install and Use Docker on ( DigitalOcean) VPS</title>
-      <link>https://oldjerry.github.io/post/2019-03-06-dockeronvps/</link>
+      <link>https://cozycafecorner.com/post/2019-03-06-dockeronvps/</link>
       <pubDate>Wed, 06 Mar 2019 10:17:09 +0000</pubDate>
-      <guid>https://oldjerry.github.io/post/2019-03-06-dockeronvps/</guid>
+      <guid>https://cozycafecorner.com/post/2019-03-06-dockeronvps/</guid>
       <description>&lt;h3 id=&#34;why-use-docker&#34;&gt;Why use Docker&lt;/h3&gt;&#xA;&lt;p&gt;Docker can efficiently deploy a service environment, such as completing a web site in a few minutes, including a web server, front end, and database for hosting a web site. Meanwhile, avoid conflicting dependencies by using separate containers for each component of an application. Docker makes it easy to maintain and transfer, especially when deployed in the cloud.&lt;/p&gt;</description>
     </item>
   </channel>
