@@ -30,6 +30,13 @@
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;In business environments, system issues can directly affect daily operations, employee productivity, and customer service.&lt;/p&gt;&#xA;&lt;p&gt;Over the years, I have worked on troubleshooting and recovering a wide range of production issues, including application failures, system instability, network interruptions, and infrastructure-related incidents.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>When Virtual Machine Time Drift Causes Production Failures</title>
+      <link>https://cozycafecorner.com/post/2026-03-20-virtualmachinetimedrift/</link>
+      <pubDate>Fri, 20 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://cozycafecorner.com/post/2026-03-20-virtualmachinetimedrift/</guid>
+      <description>&lt;h1 id=&#34;when-virtual-machine-time-drift-causes-production-failures&#34;&gt;When Virtual Machine Time Drift Causes Production Failures&lt;/h1&gt;&#xA;&lt;p&gt;In modern infrastructure, virtualization has made deployment faster, more flexible, and easier to scale. However, it also introduces subtle risks that are often overlooked until they cause real outages. One of those risks is virtual machine time drift or temporary clock inconsistency.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Three Ways to Organize Contents in a Mobile App</title>
       <link>https://cozycafecorner.com/post/2019-03-07-organizecontentinmobileapp/</link>
       <pubDate>Thu, 07 Mar 2019 11:22:45 +0000</pubDate>
