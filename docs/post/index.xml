@@ -9,6 +9,13 @@
     <lastBuildDate>Sun, 12 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cozycafecorner.com/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Hidden Support Risks in MAM-Only BYOD Strategies — and How to Design a Practical Mobile Management Approach</title>
+      <link>https://cozycafecorner.com/post/2026-04-02-risksinmamonly/</link>
+      <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://cozycafecorner.com/post/2026-04-02-risksinmamonly/</guid>
+      <description>&lt;h2 id=&#34;why-mobile-management-matters-more-than-ever&#34;&gt;Why Mobile Management Matters More Than Ever&lt;/h2&gt;&#xA;&lt;p&gt;In modern business environments, mobile access is no longer optional. Employees expect to use email, messaging, file sharing, and business applications from their phones and tablets — often on personal devices.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Secure Remote Access with WireGuard and OpenWrt</title>
       <link>https://cozycafecorner.com/post/2026-02-06-wireguard/</link>
       <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
