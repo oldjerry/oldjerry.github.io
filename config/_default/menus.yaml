@@ -1,18 +1,18 @@
 main:
   - name: "Home"
-    url: "/#hero"
+    url: "/#hero/"
     weight: 1
 
   - name: "Services"
-    url: "/services/services"
+    url: "/services/services/"
     weight: 2
 
   - name: "Blog"
-    url: "/blog"
+    url: "/blog/"
     weight: 3
 
   - name: "About"
-    url: "/about/about"
+    url: "/about/about/"
     weight: 4
 
 # buttons:
@@ -26,9 +26,9 @@ footer:
     weight: 1
 
   - name: "Services"
-    url: "/services/services"
+    url: "/services/services/"
     weight: 2
 
   - name: "Blog"
-    url: "/blog"
+    url: "/blog/"
     weight: 3
