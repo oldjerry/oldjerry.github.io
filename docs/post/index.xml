@@ -2,59 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Cozy Cafe Corner</title>
-    <link>https://cozycafecorner.com/post/</link>
+    <link>https://www.cozycafecorner.com/post/</link>
     <description>Recent content in Blog on Cozy Cafe Corner</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 12 Apr 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://cozycafecorner.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.cozycafecorner.com/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hidden Support Risks in MAM-Only BYOD Strategies — and How to Design a Practical Mobile Management Approach</title>
-      <link>https://cozycafecorner.com/post/2026-04-02-risksinmamonly/</link>
+      <link>https://www.cozycafecorner.com/post/2026-04-02-risksinmamonly/</link>
       <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://cozycafecorner.com/post/2026-04-02-risksinmamonly/</guid>
+      <guid>https://www.cozycafecorner.com/post/2026-04-02-risksinmamonly/</guid>
       <description>&lt;h2 id=&#34;why-mobile-management-matters-more-than-ever&#34;&gt;Why Mobile Management Matters More Than Ever&lt;/h2&gt;&#xA;&lt;p&gt;In modern business environments, mobile access is no longer optional. Employees expect to use email, messaging, file sharing, and business applications from their phones and tablets — often on personal devices.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Secure Remote Access with WireGuard and OpenWrt</title>
-      <link>https://cozycafecorner.com/post/2026-02-06-wireguard/</link>
+      <link>https://www.cozycafecorner.com/post/2026-02-06-wireguard/</link>
       <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://cozycafecorner.com/post/2026-02-06-wireguard/</guid>
+      <guid>https://www.cozycafecorner.com/post/2026-02-06-wireguard/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;This project focused on building a secure and flexible remote access solution using WireGuard and OpenWrt.&lt;/p&gt;&#xA;&lt;p&gt;The goal was to enable reliable remote access to devices and services while maintaining network security and allowing selected traffic to be routed through a VPN connection when needed.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Small Business IT Infrastructure: Practical Setup and Best Practices</title>
-      <link>https://cozycafecorner.com/post/2026-03-16-itinfrastructure/</link>
+      <link>https://www.cozycafecorner.com/post/2026-03-16-itinfrastructure/</link>
       <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://cozycafecorner.com/post/2026-03-16-itinfrastructure/</guid>
+      <guid>https://www.cozycafecorner.com/post/2026-03-16-itinfrastructure/</guid>
       <description>&lt;h2 id=&#34;why-it-infrastructure-matters-for-small-businesses&#34;&gt;Why IT Infrastructure Matters for Small Businesses&lt;/h2&gt;&#xA;&lt;p&gt;For small businesses, IT infrastructure is not just about having computers and internet access. It directly affects productivity, customer service, security, and business continuity.&lt;/p&gt;</description>
     </item>
     <item>
       <title>System Troubleshooting &amp; Recovery in Critical Business Environments</title>
-      <link>https://cozycafecorner.com/post/2026-03-01-troubleshooting/</link>
+      <link>https://www.cozycafecorner.com/post/2026-03-01-troubleshooting/</link>
       <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://cozycafecorner.com/post/2026-03-01-troubleshooting/</guid>
+      <guid>https://www.cozycafecorner.com/post/2026-03-01-troubleshooting/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;In business environments, system issues can directly affect daily operations, employee productivity, and customer service.&lt;/p&gt;&#xA;&lt;p&gt;Over the years, I have worked on troubleshooting and recovering a wide range of production issues, including application failures, system instability, network interruptions, and infrastructure-related incidents.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Troubleshooting Intermittent Failures: A Practical Case of Early Hard Drive Degradation</title>
+      <link>https://www.cozycafecorner.com/post/2026-04-10-intermittentfailures/</link>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.cozycafecorner.com/post/2026-04-10-intermittentfailures/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Intermittent failures are among the most challenging issues in workplace IT support.&lt;/p&gt;&#xA;&lt;p&gt;Unlike consistent and reproducible problems, intermittent issues appear randomly, often disappear during troubleshooting, and may not leave clear error messages. However, these issues can indicate underlying risks that, if ignored, may lead to sudden system failure and data loss.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>When Virtual Machine Time Drift Causes Production Failures</title>
-      <link>https://cozycafecorner.com/post/2026-03-20-virtualmachinetimedrift/</link>
+      <link>https://www.cozycafecorner.com/post/2026-03-20-virtualmachinetimedrift/</link>
       <pubDate>Fri, 20 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://cozycafecorner.com/post/2026-03-20-virtualmachinetimedrift/</guid>
+      <guid>https://www.cozycafecorner.com/post/2026-03-20-virtualmachinetimedrift/</guid>
       <description>&lt;h1 id=&#34;when-virtual-machine-time-drift-causes-production-failures&#34;&gt;When Virtual Machine Time Drift Causes Production Failures&lt;/h1&gt;&#xA;&lt;p&gt;In modern infrastructure, virtualization has made deployment faster, more flexible, and easier to scale. However, it also introduces subtle risks that are often overlooked until they cause real outages. One of those risks is virtual machine time drift or temporary clock inconsistency.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Three Ways to Organize Contents in a Mobile App</title>
-      <link>https://cozycafecorner.com/post/2019-03-07-organizecontentinmobileapp/</link>
+      <link>https://www.cozycafecorner.com/post/2019-03-07-organizecontentinmobileapp/</link>
       <pubDate>Thu, 07 Mar 2019 11:22:45 +0000</pubDate>
-      <guid>https://cozycafecorner.com/post/2019-03-07-organizecontentinmobileapp/</guid>
+      <guid>https://www.cozycafecorner.com/post/2019-03-07-organizecontentinmobileapp/</guid>
       <description>&lt;p&gt;List-Detail View and Cards are common modes for show content pages for mobile websites &amp;amp; apps. I summarized 3 forms in different types that are I have used in my projects.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Install and Use Docker on ( DigitalOcean) VPS</title>
-      <link>https://cozycafecorner.com/post/2019-03-06-dockeronvps/</link>
+      <link>https://www.cozycafecorner.com/post/2019-03-06-dockeronvps/</link>
       <pubDate>Wed, 06 Mar 2019 10:17:09 +0000</pubDate>
-      <guid>https://cozycafecorner.com/post/2019-03-06-dockeronvps/</guid>
+      <guid>https://www.cozycafecorner.com/post/2019-03-06-dockeronvps/</guid>
       <description>&lt;h3 id=&#34;why-use-docker&#34;&gt;Why use Docker&lt;/h3&gt;&#xA;&lt;p&gt;Docker can efficiently deploy a service environment, such as completing a web site in a few minutes, including a web server, front end, and database for hosting a web site. Meanwhile, avoid conflicting dependencies by using separate containers for each component of an application. Docker makes it easy to maintain and transfer, especially when deployed in the cloud.&lt;/p&gt;</description>
     </item>
   </channel>

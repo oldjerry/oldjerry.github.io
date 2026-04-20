@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Services on Cozy Cafe Corner</title>
-    <link>https://cozycafecorner.com/services/</link>
+    <link>https://www.cozycafecorner.com/services/</link>
     <description>Recent content in Services on Cozy Cafe Corner</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://cozycafecorner.com/services/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.cozycafecorner.com/services/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Technical Services</title>
-      <link>https://cozycafecorner.com/services/services/</link>
+      <link>https://www.cozycafecorner.com/services/services/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://cozycafecorner.com/services/services/</guid>
+      <guid>https://www.cozycafecorner.com/services/services/</guid>
       <description>&lt;p&gt;I provide practical IT support and technical solutions for individuals, small businesses, and teams who need reliable help with systems, networks, and applications.&lt;/p&gt;</description>
     </item>
   </channel>

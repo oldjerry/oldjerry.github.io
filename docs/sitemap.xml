@@ -2,56 +2,59 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cozycafecorner.com/post/</loc>
+    <loc>https://www.cozycafecorner.com/post/</loc>
     <lastmod>2026-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cozycafecorner.com/</loc>
+    <loc>https://www.cozycafecorner.com/</loc>
     <lastmod>2026-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cozycafecorner.com/post/2026-04-02-risksinmamonly/</loc>
+    <loc>https://www.cozycafecorner.com/post/2026-04-02-risksinmamonly/</loc>
     <lastmod>2026-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cozycafecorner.com/tags/index/</loc>
+    <loc>https://www.cozycafecorner.com/tags/index/</loc>
     <lastmod>2026-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cozycafecorner.com/post/2026-02-06-wireguard/</loc>
+    <loc>https://www.cozycafecorner.com/post/2026-02-06-wireguard/</loc>
     <lastmod>2026-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cozycafecorner.com/post/2026-03-16-itinfrastructure/</loc>
+    <loc>https://www.cozycafecorner.com/post/2026-03-16-itinfrastructure/</loc>
     <lastmod>2026-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cozycafecorner.com/post/2026-03-01-troubleshooting/</loc>
+    <loc>https://www.cozycafecorner.com/post/2026-03-01-troubleshooting/</loc>
     <lastmod>2026-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cozycafecorner.com/tags/</loc>
+    <loc>https://www.cozycafecorner.com/tags/</loc>
     <lastmod>2026-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cozycafecorner.com/post/2026-03-20-virtualmachinetimedrift/</loc>
+    <loc>https://www.cozycafecorner.com/post/2026-04-10-intermittentfailures/</loc>
+    <lastmod>2026-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/post/2026-03-20-virtualmachinetimedrift/</loc>
     <lastmod>2026-03-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cozycafecorner.com/tags/front-end/</loc>
+    <loc>https://www.cozycafecorner.com/tags/front-end/</loc>
     <lastmod>2019-03-07T11:22:45+00:00</lastmod>
   </url><url>
-    <loc>https://cozycafecorner.com/tags/full-stack/</loc>
+    <loc>https://www.cozycafecorner.com/tags/full-stack/</loc>
     <lastmod>2019-03-07T11:22:45+00:00</lastmod>
   </url><url>
-    <loc>https://cozycafecorner.com/post/2019-03-07-organizecontentinmobileapp/</loc>
+    <loc>https://www.cozycafecorner.com/post/2019-03-07-organizecontentinmobileapp/</loc>
     <lastmod>2019-03-07T11:22:45+00:00</lastmod>
   </url><url>
-    <loc>https://cozycafecorner.com/tags/devops/</loc>
+    <loc>https://www.cozycafecorner.com/tags/devops/</loc>
     <lastmod>2019-03-06T10:17:09+00:00</lastmod>
   </url><url>
-    <loc>https://cozycafecorner.com/post/2019-03-06-dockeronvps/</loc>
+    <loc>https://www.cozycafecorner.com/post/2019-03-06-dockeronvps/</loc>
     <lastmod>2019-03-06T10:17:09+00:00</lastmod>
   </url><url>
-    <loc>https://cozycafecorner.com/about/</loc>
+    <loc>https://www.cozycafecorner.com/about/</loc>
   </url><url>
-    <loc>https://cozycafecorner.com/about/about/</loc>
+    <loc>https://www.cozycafecorner.com/about/about/</loc>
   </url><url>
-    <loc>https://cozycafecorner.com/series/</loc>
+    <loc>https://www.cozycafecorner.com/series/</loc>
   </url><url>
-    <loc>https://cozycafecorner.com/services/</loc>
+    <loc>https://www.cozycafecorner.com/services/</loc>
   </url><url>
-    <loc>https://cozycafecorner.com/services/services/</loc>
+    <loc>https://www.cozycafecorner.com/services/services/</loc>
   </url>
 </urlset>
