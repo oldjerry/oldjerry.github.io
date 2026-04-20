@@ -6,8 +6,15 @@
     <description>Recent content in Blog on Cozy Cafe Corner</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.cozycafecorner.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>From Support to Operations: A Practical View of Managing Multi-Tenant Systems</title>
+      <link>https://www.cozycafecorner.com/post/2026-04-15-fromsupport2operations/</link>
+      <pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.cozycafecorner.com/post/2026-04-15-fromsupport2operations/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;In many organizations, IT support is often seen as reactive — responding to tickets, fixing issues, and assisting users.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Hidden Support Risks in MAM-Only BYOD Strategies — and How to Design a Practical Mobile Management Approach</title>
       <link>https://www.cozycafecorner.com/post/2026-04-02-risksinmamonly/</link>
