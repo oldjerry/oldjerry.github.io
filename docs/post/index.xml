@@ -44,6 +44,13 @@
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;In business environments, system issues can directly affect daily operations, employee productivity, and customer service.&lt;/p&gt;&#xA;&lt;p&gt;Over the years, I have worked on troubleshooting and recovering a wide range of production issues, including application failures, system instability, network interruptions, and infrastructure-related incidents.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>When Docker Breaks IPv6 on OpenWrt: A Real-World Troubleshooting Case</title>
+      <link>https://www.cozycafecorner.com/post/2026-05-01-dockeronopenwrt/</link>
+      <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.cozycafecorner.com/post/2026-05-01-dockeronopenwrt/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;This article describes a real-world troubleshooting case involving IPv6 connectivity issues in a home lab environment.&lt;/p&gt;&#xA;&lt;p&gt;The issue appeared after enabling IPv6 support in Docker running on an OpenWrt router. While the router itself still had working IPv6 connectivity, all LAN clients lost IPv6 access.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Troubleshooting Intermittent Failures: A Practical Case of Early Hard Drive Degradation</title>
       <link>https://www.cozycafecorner.com/post/2026-04-10-intermittentfailures/</link>
       <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>

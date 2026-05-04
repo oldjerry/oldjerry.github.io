@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    
+      <title>When Docker Breaks IPv6 on OpenWrt: A Real-World Troubleshooting Case | Cozy Cafe Corner</title>
+    
+
+
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+    
+    
+      
+    
+    <meta name="description" content="A practical troubleshooting case where enabling Docker IPv6 on OpenWrt caused LAN-wide IPv6 failure." />
+
+    
+    
+    <meta property="og:url" content="https://www.cozycafecorner.com/post/2026-05-01-dockeronopenwrt/">
+  <meta property="og:site_name" content="Cozy Cafe Corner">
+  <meta property="og:title" content="When Docker Breaks IPv6 on OpenWrt: A Real-World Troubleshooting Case">
+  <meta property="og:description" content="A practical troubleshooting case where enabling Docker IPv6 on OpenWrt caused LAN-wide IPv6 failure.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2026-04-12T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-04-12T00:00:00+00:00">
+    <meta property="og:image" content="https://www.cozycafecorner.com/images/hero-image.png">
+
+    
+  <meta itemprop="name" content="When Docker Breaks IPv6 on OpenWrt: A Real-World Troubleshooting Case">
+  <meta itemprop="description" content="A practical troubleshooting case where enabling Docker IPv6 on OpenWrt caused LAN-wide IPv6 failure.">
+  <meta itemprop="datePublished" content="2026-04-12T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2026-04-12T00:00:00+00:00">
+  <meta itemprop="wordCount" content="740">
+  <meta itemprop="image" content="https://www.cozycafecorner.com/images/hero-image.png">
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.cozycafecorner.com/images/hero-image.png">
+  <meta name="twitter:title" content="When Docker Breaks IPv6 on OpenWrt: A Real-World Troubleshooting Case">
+  <meta name="twitter:description" content="A practical troubleshooting case where enabling Docker IPv6 on OpenWrt caused LAN-wide IPv6 failure.">
+
+
+
+    
+    
+      <link rel="icon" type="image/x-icon" href="https://www.cozycafecorner.com/favicon.ico" />
+    
+
+    
+
+    
+
+    
+
+    
+      <link rel="manifest" href="https://www.cozycafecorner.com/site.webmanifest" />
+    
+
+    
+
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    
+    
+    
+      
+        
+          
+          
+            <link
+              rel="stylesheet"
+              href="/css/styles.e34e0a43fca271bc8bddb7bf17ce4645818c5c8356ac6280eedf0dfc40f86bbb.css"
+              integrity="sha256-404KQ/yicbyL3be/F85GRYGMXINWrGKA7t8N/ED4a7s="
+              crossorigin="anonymous"
+            />
+          
+        
+      
+    
+
+
+    
+    
+      
+        
+        
+          <link rel="stylesheet" href="/css/fonts.6777448b727bc66b52b18a918eab1ed6ac27e614b722b47ff58b488288728b50.css" integrity="sha256-Z3dEi3J7xmtSsYqRjqse1qwn5hS3IrR/9YtIgohyi1A=" crossorigin="anonymous" />
+        
+      
+    
+
+
+    
+        
+      
+      <script src="/js/main.7b57960741aab0c5345ed2de96e3271beece68496732534388fb608dad5f5490.min.js" defer></script>
+    
+
+    <link rel="canonical" href="https://www.cozycafecorner.com/post/2026-05-01-dockeronopenwrt/">
+    
+  </head>
+  <body class="">
+    <div class="flex min-h-screen flex-col">
+      <nav class="">
+  <div class="container mx-auto flex items-center justify-between px-4 py-6">
+    <a class="flex items-center" href="https://www.cozycafecorner.com/">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<img
+  src="https://www.cozycafecorner.com/images/logo.png"
+  width="500"
+  height="500"
+  
+  
+  class="size-6 xl:size-8"
+  alt="map[class:size-6 xl:size-8 src:images/logo.png]"
+/>
+
+      <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+    </a>
+    <button
+      class="cursor-pointer xl:hidden"
+      type="button"
+      data-toggle-target="#navbarContent"
+      data-toggle-class="-translate-y-full"
+      aria-label="Toggle Navigation"
+    >
+      <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+  />
+</svg>
+
+
+    </button>
+    <div
+      class="fixed inset-0 flex -translate-y-full flex-col items-center justify-center gap-8 bg-white duration-500 xl:relative xl:translate-y-0 xl:flex-row"
+      id="navbarContent"
+    >
+      <div class="container absolute top-0 mx-auto flex items-center justify-between px-4 py-6 xl:hidden">
+        <a class="flex items-center xl:hidden" href="https://www.cozycafecorner.com/">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<img
+  src="https://www.cozycafecorner.com/images/logo.png"
+  width="500"
+  height="500"
+  
+  
+  class="size-6 xl:size-8"
+  alt="map[class:size-6 xl:size-8 src:images/logo.png]"
+/>
+
+          <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+        </a>
+        <button
+          class="cursor-pointer xl:hidden"
+          type="button"
+          data-toggle-target="#navbarContent"
+          data-toggle-class="-translate-y-full"
+          aria-label="Toggle Navigation"
+        >
+          <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
+
+        </button>
+      </div>
+      <ul class="flex flex-col gap-8 xl:flex-row">
+        
+          <li class="text-center">
+            <a class="text-primary" href="/#hero/">Home</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/services/services/">Services</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/blog/">Blog</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/about/about/">About</a>
+          </li>
+        
+      </ul>
+      <ul class="flex flex-col gap-8 xl:flex-row">
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      <div class="grow">
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      
+        <h2 class="text-primary mb-16 text-center text-6xl font-bold">When Docker Breaks IPv6 on OpenWrt: A Real-World Troubleshooting Case</h2>
+      
+      
+        <p class="mx-auto mb-16 text-center xl:max-w-[50%]">A practical troubleshooting case where enabling Docker IPv6 on OpenWrt caused LAN-wide IPv6 failure.</p>
+      
+      
+        <div class="prose prose-lg mx-auto">
+          <h2 id="overview">Overview</h2>
+<p>This article describes a real-world troubleshooting case involving IPv6 connectivity issues in a home lab environment.</p>
+<p>The issue appeared after enabling IPv6 support in Docker running on an OpenWrt router. While the router itself still had working IPv6 connectivity, all LAN clients lost IPv6 access.</p>
+<p>This type of problem is difficult to diagnose because the symptoms often point to common causes such as firewall or routing issues, while the actual root cause lies deeper in system-level interactions.</p>
+<hr>
+<h2 id="the-problem">The Problem</h2>
+<p>After enabling IPv6 in Docker:</p>
+<ul>
+<li>The router maintained IPv6 connectivity</li>
+<li>LAN clients could no longer access IPv6 resources</li>
+<li>Existing IPv4 connectivity remained unaffected</li>
+<li>Disabling Docker restored normal IPv6 behavior</li>
+</ul>
+<p>From a user perspective, it appeared that:</p>
+<blockquote>
+<p>“IPv6 suddenly stopped working on all devices.”</p>
+</blockquote>
+<hr>
+<h2 id="initial-assumptions">Initial Assumptions</h2>
+<p>The first troubleshooting steps focused on typical network issues:</p>
+<ul>
+<li>Firewall rules (forwarding, blocking, NAT)</li>
+<li>IPv6 routing configuration</li>
+<li>Prefix delegation and address assignment</li>
+<li>DNS resolution</li>
+</ul>
+<p>These are the most common causes of IPv6 connectivity problems.</p>
+<p>However, none of these checks revealed a clear issue.</p>
+<hr>
+<h2 id="investigation-process">Investigation Process</h2>
+<h3 id="1-verifying-router-connectivity">1. Verifying Router Connectivity</h3>
+<p>The router itself was able to:</p>
+<ul>
+<li>Ping external IPv6 addresses</li>
+<li>Resolve IPv6 DNS records</li>
+</ul>
+<p>This confirmed that:</p>
+<blockquote>
+<p>The upstream IPv6 connection was working correctly.</p>
+</blockquote>
+<hr>
+<h3 id="2-checking-lan-clients">2. Checking LAN Clients</h3>
+<p>On LAN devices:</p>
+<ul>
+<li>IPv6 addresses were present</li>
+<li>Default gateway appeared correct</li>
+<li>However, outbound IPv6 traffic failed</li>
+</ul>
+<p>This suggested:</p>
+<blockquote>
+<p>The issue was not address assignment, but traffic handling.</p>
+</blockquote>
+<hr>
+<h3 id="3-reviewing-firewall-and-forwarding">3. Reviewing Firewall and Forwarding</h3>
+<p>Firewall rules were reviewed:</p>
+<ul>
+<li>No obvious blocking rules</li>
+<li>Forwarding between LAN and WAN appeared correct</li>
+</ul>
+<p>At this point, the issue still resembled a firewall problem, but without clear evidence.</p>
+<hr>
+<h3 id="4-identifying-the-trigger">4. Identifying the Trigger</h3>
+<p>Further testing showed:</p>
+<ul>
+<li>The issue only occurred when Docker IPv6 support was enabled</li>
+<li>Disabling Docker or its IPv6 configuration immediately restored connectivity</li>
+</ul>
+<p>This narrowed the scope significantly:</p>
+<blockquote>
+<p>The problem was linked to Docker’s interaction with the network stack.</p>
+</blockquote>
+<hr>
+<h2 id="root-cause-practical-understanding">Root Cause (Practical Understanding)</h2>
+<p>Enabling IPv6 in Docker introduces several changes:</p>
+<ul>
+<li>Creation of virtual bridge networks</li>
+<li>Modification of iptables / nftables rules</li>
+<li>Changes to forwarding behavior</li>
+<li>Interaction with IPv6 routing and neighbor discovery</li>
+</ul>
+<p>In standard Linux environments, this usually works as expected.</p>
+<p>However, OpenWrt has a different network architecture:</p>
+<ul>
+<li>Firewall is managed via fw4 (nftables abstraction)</li>
+<li>IPv6 relies heavily on Router Advertisements (RA)</li>
+<li>Services like odhcpd manage address distribution</li>
+</ul>
+<p>When Docker modifies networking behavior:</p>
+<blockquote>
+<p>It can interfere with how IPv6 traffic and routing information are handled on the router.</p>
+</blockquote>
+<p>This leads to a situation where:</p>
+<ul>
+<li>The router itself still works</li>
+<li>But LAN clients cannot properly route IPv6 traffic</li>
+</ul>
+<hr>
+<h2 id="why-this-issue-is-hard-to-diagnose">Why This Issue Is Hard to Diagnose</h2>
+<p>This type of issue has several characteristics that make troubleshooting difficult:</p>
+<h3 id="1-misleading-symptoms">1. Misleading Symptoms</h3>
+<p>It looks like:</p>
+<ul>
+<li>A firewall problem</li>
+<li>A routing issue</li>
+<li>Or an ISP-related IPv6 problem</li>
+</ul>
+<hr>
+<h3 id="2-partial-functionality">2. Partial Functionality</h3>
+<ul>
+<li>Router works</li>
+<li>Clients fail</li>
+</ul>
+<p>This creates confusion about where the issue actually exists.</p>
+<hr>
+<h3 id="3-limited-visibility">3. Limited Visibility</h3>
+<ul>
+<li>No obvious error messages</li>
+<li>Logs may not clearly indicate the conflict</li>
+<li>Behavior depends on internal interactions between components</li>
+</ul>
+<hr>
+<h3 id="4-non-standard-environment">4. Non-Standard Environment</h3>
+<p>Running Docker on OpenWrt is not a typical use case:</p>
+<ul>
+<li>OpenWrt is optimized as a router and firewall</li>
+<li>Docker assumes a more general-purpose Linux environment</li>
+</ul>
+<p>This mismatch increases the likelihood of unexpected behavior.</p>
+<hr>
+<h2 id="resolution">Resolution</h2>
+<p>The most practical solution was:</p>
+<blockquote>
+<p>Disable IPv6 support in Docker on the OpenWrt router.</p>
+</blockquote>
+<p>After doing so:</p>
+<ul>
+<li>LAN IPv6 connectivity returned to normal</li>
+<li>No further issues were observed</li>
+</ul>
+<hr>
+<h2 id="alternative-approaches">Alternative Approaches</h2>
+<p>If IPv6 is required for containerized applications:</p>
+<ul>
+<li>Run Docker on a separate Linux host (e.g., mini PC, NAS)</li>
+<li>Keep OpenWrt focused on routing and network management</li>
+<li>Avoid overlapping control of the network stack</li>
+</ul>
+<hr>
+<h2 id="lessons-learned">Lessons Learned</h2>
+<h3 id="1-not-all-linux-environments-behave-the-same">1. Not All Linux Environments Behave the Same</h3>
+<p>Even though OpenWrt is Linux-based:</p>
+<blockquote>
+<p>Its networking model is significantly different from standard distributions.</p>
+</blockquote>
+<hr>
+<h3 id="2-intermittent-or-partial-failures-can-indicate-deeper-conflicts">2. Intermittent or Partial Failures Can Indicate Deeper Conflicts</h3>
+<p>When:</p>
+<ul>
+<li>Some components work</li>
+<li>Others fail without clear reason</li>
+</ul>
+<p>It often points to:</p>
+<blockquote>
+<p>System-level interaction issues rather than simple misconfiguration.</p>
+</blockquote>
+<hr>
+<h3 id="3-avoid-overloading-the-router">3. Avoid Overloading the Router</h3>
+<p>Routers are best suited for:</p>
+<ul>
+<li>Routing</li>
+<li>Firewall</li>
+<li>VPN</li>
+</ul>
+<p>Running complex application stacks (like Docker with advanced networking) can introduce unnecessary risk.</p>
+<hr>
+<h3 id="4-ownership-of-network-control-must-be-clear">4. Ownership of Network Control Must Be Clear</h3>
+<p>When multiple systems try to manage networking:</p>
+<ul>
+<li>Docker modifies rules</li>
+<li>OpenWrt manages firewall and routing</li>
+</ul>
+<p>Conflicts are likely.</p>
+<hr>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>This case highlights an important aspect of troubleshooting:</p>
+<blockquote>
+<p>The root cause is not always where the symptoms appear.</p>
+</blockquote>
+<p>In environments where multiple systems interact, understanding how components influence each other is critical.</p>
+<p>Recognizing these patterns helps move from trial-and-error troubleshooting to more structured problem analysis.</p>
+<hr>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://github.com/openwrt/packages/issues/24492#issuecomment-2211509498">https://github.com/openwrt/packages/issues/24492#issuecomment-2211509498</a></li>
+<li><a href="https://www.reddit.com/r/openwrt/comments/1mboedr/ipv6_router_works_fine_but_clients_cant_reach/">https://www.reddit.com/r/openwrt/comments/1mboedr/ipv6_router_works_fine_but_clients_cant_reach/</a></li>
+</ul>
+
+        </div>
+      
+    </div>
+  </section>
+</div>
+      <footer class="bg-tertiary/25 py-16">
+  <div class="container mx-auto px-4">
+    <div class="mb-8 grid gap-8 xl:grid-cols-12">
+      <div class="flex flex-col items-center gap-4 xl:col-span-4 xl:items-start">
+        <a class="flex items-center" href="https://www.cozycafecorner.com/">
+          <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+        </a>
+        <p class="text-center text-sm xl:text-start">Specializing in IT solutions, web development, and infrastructure maintenance for your business.</p>
+        
+      </div>
+      <div class="xl:col-span-2">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">About us</h2>
+        <ul class="flex flex-col gap-1 text-sm">
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/#hero">Home</a>
+            </li>
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/services/services/">Services</a>
+            </li>
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/blog/">Blog</a>
+            </li>
+          
+        </ul>
+      </div>
+      <div class="xl:col-span-3">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">Location</h2>
+        <ul class="flex flex-col gap-3 text-sm">
+          
+            <li class="flex flex-col items-center gap-4 xl:flex-row">
+              <span class="text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg>
+</span>
+              <span class="text-center xl:text-start">Richmond, BC, Canada</span>
+            </li>
+          
+        </ul>
+      </div>
+      <div class="xl:col-span-3">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">Contact Us</h2>
+        <ul class="flex flex-col gap-1 text-sm">
+          
+            <li class="text-center xl:text-start">jerrysun.work@hotmail.com</li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-sm">
+      <div class="">
+        
+          <p class="">© 2026 Cozy Cafe Corner All Rights Reserved</p>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>
