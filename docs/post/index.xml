@@ -6,8 +6,15 @@
     <description>Recent content in Blog on Cozy Cafe Corner</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.cozycafecorner.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>When Rufus, Secure Boot, and Windows 11 Collide: Understanding a Modern Installation Issue</title>
+      <link>https://www.cozycafecorner.com/post/2026-0516-rufussecurebootwindows/</link>
+      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.cozycafecorner.com/post/2026-0516-rufussecurebootwindows/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;While testing a recent Windows 11 build, I encountered an unexpected Secure Boot issue during installation.&lt;/p&gt;&#xA;&lt;p&gt;The installation itself completed successfully, but after removing the USB installer and rebooting the system, the machine failed to start normally and displayed a Secure Boot compatibility error related to the current boot chain.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>From Support to Operations: A Practical View of Managing Multi-Tenant Systems</title>
       <link>https://www.cozycafecorner.com/post/2026-04-15-fromsupport2operations/</link>
@@ -24,9 +31,9 @@
     </item>
     <item>
       <title>macOS Troubleshooting in Real-World IT Support: Looking Beyond Simple Fixes</title>
-      <link>https://www.cozycafecorner.com/post/2026-05-5-macosturobleshooting/</link>
+      <link>https://www.cozycafecorner.com/post/2026-05-05-macosturobleshooting/</link>
       <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://www.cozycafecorner.com/post/2026-05-5-macosturobleshooting/</guid>
+      <guid>https://www.cozycafecorner.com/post/2026-05-05-macosturobleshooting/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;macOS is often considered stable and user-friendly, especially compared to more traditional enterprise desktop environments.&lt;/p&gt;&#xA;&lt;p&gt;However, in real IT support scenarios, macOS troubleshooting presents its own unique challenges:&lt;/p&gt;</description>
     </item>
     <item>
