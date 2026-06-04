@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Fri, 15 May 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Mon, 01 Jun 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://www.cozycafecorner.com/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>How to Disable Automatic Startup When Opening the Lid on Apple Silicon Macs</title>
+				<link>https://www.cozycafecorner.com/post/2026-06-01-disablemacautostartup/</link>
+				<pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/post/2026-06-01-disablemacautostartup/</guid>
+				<description>&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;&#xA;&lt;p&gt;Apple Silicon MacBooks are designed to provide a seamless user experience.&lt;/p&gt;&#xA;&lt;p&gt;On modern MacBook models equipped with Apple M-series processors and recent versions of macOS, the system will automatically power on when:&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>When Rufus, Secure Boot, and Windows 11 Collide: Understanding a Modern Installation Issue</title>
 				<link>https://www.cozycafecorner.com/post/2026-05-16-rufussecurebootwindows/</link>
