@@ -10,28 +10,63 @@
 		
 		
 		
-			<lastBuildDate>Mon, 01 Jun 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Wed, 17 Jun 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://www.cozycafecorner.com/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
+				<title>Apple Containers</title>
+				<link>https://www.cozycafecorner.com/tags/apple-containers/</link>
+				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/apple-containers/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Apple Silicon</title>
 				<link>https://www.cozycafecorner.com/tags/apple-silicon/</link>
-				<pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
 				<guid>https://www.cozycafecorner.com/tags/apple-silicon/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Docker</title>
+				<link>https://www.cozycafecorner.com/tags/docker/</link>
+				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/docker/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Index</title>
 				<link>https://www.cozycafecorner.com/tags/index/</link>
-				<pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
 				<guid>https://www.cozycafecorner.com/tags/index/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Infrastructure</title>
+				<link>https://www.cozycafecorner.com/tags/infrastructure/</link>
+				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/infrastructure/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>IT Support</title>
 				<link>https://www.cozycafecorner.com/tags/it-support/</link>
-				<pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
 				<guid>https://www.cozycafecorner.com/tags/it-support/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>MacOS</title>
+				<link>https://www.cozycafecorner.com/tags/macos/</link>
+				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/macos/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>OrbStack</title>
+				<link>https://www.cozycafecorner.com/tags/orbstack/</link>
+				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/orbstack/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -39,13 +74,6 @@
 				<link>https://www.cozycafecorner.com/tags/macbook/</link>
 				<pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
 				<guid>https://www.cozycafecorner.com/tags/macbook/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>MacOS</title>
-				<link>https://www.cozycafecorner.com/tags/macos/</link>
-				<pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>https://www.cozycafecorner.com/tags/macos/</guid>
 				<description></description>
 			</item>
 			<item>

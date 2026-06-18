@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>MacOS on Cozy Cafe Corner</title>
-		<link>https://www.cozycafecorner.com/tags/macos/</link>
-		<description>Recent content in MacOS on Cozy Cafe Corner</description>
+		<title>Apple Containers on Cozy Cafe Corner</title>
+		<link>https://www.cozycafecorner.com/tags/apple-containers/</link>
+		<description>Recent content in Apple Containers on Cozy Cafe Corner</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
 		
@@ -12,20 +12,13 @@
 		
 			<lastBuildDate>Wed, 17 Jun 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="https://www.cozycafecorner.com/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://www.cozycafecorner.com/tags/apple-containers/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Apple Containers 1.0: What It Means for macOS, Docker, and Modern IT Workflows</title>
 				<link>https://www.cozycafecorner.com/post/2026-06-15-applecontainers1.0/</link>
 				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
 				<guid>https://www.cozycafecorner.com/post/2026-06-15-applecontainers1.0/</guid>
 				<description>&lt;h1 id=&#34;apple-containers-10-what-it-means-for-macos-docker-and-modern-it-workflows&#34;&gt;Apple Containers 1.0: What It Means for macOS, Docker, and Modern IT Workflows&lt;/h1&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Apple recently released &lt;strong&gt;Apple Containers 1.0&lt;/strong&gt;, introducing a native container runtime for macOS.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>How to Disable Automatic Startup When Opening the Lid on Apple Silicon Macs</title>
-				<link>https://www.cozycafecorner.com/post/2026-06-01-disablemacautostartup/</link>
-				<pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>https://www.cozycafecorner.com/post/2026-06-01-disablemacautostartup/</guid>
-				<description>&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;&#xA;&lt;p&gt;Apple Silicon MacBooks are designed to provide a seamless user experience.&lt;/p&gt;&#xA;&lt;p&gt;On modern MacBook models equipped with Apple M-series processors and recent versions of macOS, the system will automatically power on when:&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>
