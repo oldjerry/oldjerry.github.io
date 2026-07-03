@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Microsoft Entra ID on Cozy Cafe Corner</title>
+		<link>https://www.cozycafecorner.com/tags/microsoft-entra-id/</link>
+		<description>Recent content in Microsoft Entra ID on Cozy Cafe Corner</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 02 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://www.cozycafecorner.com/tags/microsoft-entra-id/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Active Directory vs Microsoft Entra ID: Understanding Identity in Modern Enterprise IT</title>
+				<link>https://www.cozycafecorner.com/post/2026-06-30-advsmed/</link>
+				<pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/post/2026-06-30-advsmed/</guid>
+				<description>&lt;h1 id=&#34;active-directory-vs-microsoft-entra-id-understanding-identity-in-modern-enterprise-it&#34;&gt;Active Directory vs Microsoft Entra ID: Understanding Identity in Modern Enterprise IT&lt;/h1&gt;&#xA;&lt;h2 id=&#34;why-this-article-matters&#34;&gt;Why This Article Matters&lt;/h2&gt;&#xA;&lt;p&gt;One of the biggest misconceptions I still hear is:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
