@@ -10,15 +10,15 @@
 		
 		
 		
-			<lastBuildDate>Thu, 02 Jul 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Tue, 30 Jun 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://www.cozycafecorner.com/post/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Active Directory vs Microsoft Entra ID: Understanding Identity in Modern Enterprise IT</title>
+				<title>AD vs Microsoft Entra ID: Understanding Identity in Modern Enterprise IT</title>
 				<link>https://www.cozycafecorner.com/post/2026-06-30-advsmed/</link>
-				<pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
 				<guid>https://www.cozycafecorner.com/post/2026-06-30-advsmed/</guid>
-				<description>&lt;h1 id=&#34;active-directory-vs-microsoft-entra-id-understanding-identity-in-modern-enterprise-it&#34;&gt;Active Directory vs Microsoft Entra ID: Understanding Identity in Modern Enterprise IT&lt;/h1&gt;&#xA;&lt;h2 id=&#34;why-this-article-matters&#34;&gt;Why This Article Matters&lt;/h2&gt;&#xA;&lt;p&gt;One of the biggest misconceptions I still hear is:&lt;/p&gt;</description>
+				<description>&lt;h2 id=&#34;why-this-article-matters&#34;&gt;Why This Article Matters&lt;/h2&gt;&#xA;&lt;p&gt;One of the biggest misconceptions I still hear is:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;We&amp;rsquo;re using Microsoft 365 now, so we don&amp;rsquo;t need Active Directory anymore.&amp;rdquo;&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Apple Containers 1.0: What It Means for macOS, Docker, and Modern IT Workflows</title>
