@@ -1,7 +1,7 @@
 ---
 title: "Enable Touch ID for sudo on macOS: A Small Change That Makes Terminal Much More Pleasant"
 description: "Learn how to enable Touch ID authentication for sudo on macOS using Apple's supported PAM configuration. A simple one-line change that improves your daily Terminal experience."
-date: 2026-07-04
+date: 2026-07-02
 draft: false
 
 tags:
