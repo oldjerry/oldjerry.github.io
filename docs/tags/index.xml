@@ -10,9 +10,65 @@
 		
 		
 		
-			<lastBuildDate>Tue, 30 Jun 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Sat, 04 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://www.cozycafecorner.com/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Apple Silicon</title>
+				<link>https://www.cozycafecorner.com/tags/apple-silicon/</link>
+				<pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/apple-silicon/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Index</title>
+				<link>https://www.cozycafecorner.com/tags/index/</link>
+				<pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/index/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>IT Support</title>
+				<link>https://www.cozycafecorner.com/tags/it-support/</link>
+				<pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/it-support/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>MacOS</title>
+				<link>https://www.cozycafecorner.com/tags/macos/</link>
+				<pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/macos/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Productivity</title>
+				<link>https://www.cozycafecorner.com/tags/productivity/</link>
+				<pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/productivity/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Sudo</title>
+				<link>https://www.cozycafecorner.com/tags/sudo/</link>
+				<pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/sudo/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Terminal</title>
+				<link>https://www.cozycafecorner.com/tags/terminal/</link>
+				<pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/terminal/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Touch ID</title>
+				<link>https://www.cozycafecorner.com/tags/touch-id/</link>
+				<pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/touch-id/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>Active Directory</title>
 				<link>https://www.cozycafecorner.com/tags/active-directory/</link>
@@ -28,13 +84,6 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Index</title>
-				<link>https://www.cozycafecorner.com/tags/index/</link>
-				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>https://www.cozycafecorner.com/tags/index/</guid>
-				<description></description>
-			</item>
-			<item>
 				<title>Infrastructure</title>
 				<link>https://www.cozycafecorner.com/tags/infrastructure/</link>
 				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
@@ -46,13 +95,6 @@
 				<link>https://www.cozycafecorner.com/tags/intune/</link>
 				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
 				<guid>https://www.cozycafecorner.com/tags/intune/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>IT Support</title>
-				<link>https://www.cozycafecorner.com/tags/it-support/</link>
-				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>https://www.cozycafecorner.com/tags/it-support/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -84,24 +126,10 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Apple Silicon</title>
-				<link>https://www.cozycafecorner.com/tags/apple-silicon/</link>
-				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>https://www.cozycafecorner.com/tags/apple-silicon/</guid>
-				<description></description>
-			</item>
-			<item>
 				<title>Docker</title>
 				<link>https://www.cozycafecorner.com/tags/docker/</link>
 				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
 				<guid>https://www.cozycafecorner.com/tags/docker/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>MacOS</title>
-				<link>https://www.cozycafecorner.com/tags/macos/</link>
-				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>https://www.cozycafecorner.com/tags/macos/</guid>
 				<description></description>
 			</item>
 			<item>
