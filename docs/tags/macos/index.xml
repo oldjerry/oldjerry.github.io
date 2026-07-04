@@ -18,7 +18,7 @@
 				<link>https://www.cozycafecorner.com/post/2026-07-02-touchidforsudo/</link>
 				<pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
 				<guid>https://www.cozycafecorner.com/post/2026-07-02-touchidforsudo/</guid>
-				<description>&lt;h1 id=&#34;enable-touch-id-for-sudo-on-macos-a-small-change-that-makes-terminal-much-more-pleasant&#34;&gt;Enable Touch ID for sudo on macOS: A Small Change That Makes Terminal Much More Pleasant&lt;/h1&gt;&#xA;&lt;h2 id=&#34;why-this-matters&#34;&gt;Why This Matters&lt;/h2&gt;&#xA;&lt;p&gt;If you spend a lot of time in Terminal, you&amp;rsquo;ve probably had this experience.&lt;/p&gt;</description>
+				<description>&lt;h2 id=&#34;why-this-matters&#34;&gt;Why This Matters&lt;/h2&gt;&#xA;&lt;p&gt;If you spend a lot of time in Terminal, you&amp;rsquo;ve probably had this experience.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker ps&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo vi /etc/hosts&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl restart service&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo nano config.yaml&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Every command asks for your password.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Apple Containers 1.0: What It Means for macOS, Docker, and Modern IT Workflows</title>
