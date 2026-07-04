@@ -17,7 +17,6 @@ categories:
   - macOS
 ---
 
-# Enable Touch ID for sudo on macOS: A Small Change That Makes Terminal Much More Pleasant
 
 ## Why This Matters
 
