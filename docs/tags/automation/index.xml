@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Automation on Cozy Cafe Corner</title>
+		<link>https://www.cozycafecorner.com/tags/automation/</link>
+		<description>Recent content in Automation on Cozy Cafe Corner</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 12 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://www.cozycafecorner.com/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Learning CI/CD as an IT Professional</title>
+				<link>https://www.cozycafecorner.com/post/206-07-12-understandingcicd/</link>
+				<pubDate>Sun, 12 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/post/206-07-12-understandingcicd/</guid>
+				<description>&lt;h1 id=&#34;learning-cicd-as-an-it-professional&#34;&gt;Learning CI/CD as an IT Professional&lt;/h1&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Although I have worked in software development, IT support, and infrastructure for many years, CI/CD is an area I have only recently started exploring in depth.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

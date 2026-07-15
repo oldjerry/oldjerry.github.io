@@ -2,22 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.cozycafecorner.com/tags/automation/</loc>
+    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/post/</loc>
+    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/ci/cd/</loc>
+    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/</loc>
+    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/devops/</loc>
+    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/docker/</loc>
+    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/github-actions/</loc>
+    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/index/</loc>
+    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/it-support/</loc>
+    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/post/206-07-12-understandingcicd/</loc>
+    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/</loc>
+    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.cozycafecorner.com/tags/apple-silicon/</loc>
     <lastmod>2026-07-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.cozycafecorner.com/post/</loc>
-    <lastmod>2026-07-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.cozycafecorner.com/</loc>
-    <lastmod>2026-07-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.cozycafecorner.com/post/2026-07-02-touchidforsudo/</loc>
-    <lastmod>2026-07-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.cozycafecorner.com/tags/index/</loc>
-    <lastmod>2026-07-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.cozycafecorner.com/tags/it-support/</loc>
     <lastmod>2026-07-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cozycafecorner.com/tags/macos/</loc>
@@ -27,9 +48,6 @@
     <lastmod>2026-07-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cozycafecorner.com/tags/sudo/</loc>
-    <lastmod>2026-07-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.cozycafecorner.com/tags/</loc>
     <lastmod>2026-07-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cozycafecorner.com/tags/terminal/</loc>
@@ -66,9 +84,6 @@
     <lastmod>2026-06-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cozycafecorner.com/post/2026-06-15-applecontainers1.0/</loc>
-    <lastmod>2026-06-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.cozycafecorner.com/tags/docker/</loc>
     <lastmod>2026-06-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cozycafecorner.com/tags/orbstack/</loc>
@@ -121,9 +136,6 @@
   </url><url>
     <loc>https://www.cozycafecorner.com/post/2019-03-07-organizecontentinmobileapp/</loc>
     <lastmod>2019-03-07T11:22:45+00:00</lastmod>
-  </url><url>
-    <loc>https://www.cozycafecorner.com/tags/devops/</loc>
-    <lastmod>2019-03-06T10:17:09+00:00</lastmod>
   </url><url>
     <loc>https://www.cozycafecorner.com/post/2019-03-06-dockeronvps/</loc>
     <lastmod>2019-03-06T10:17:09+00:00</lastmod>
