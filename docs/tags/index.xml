@@ -10,9 +10,65 @@
 		
 		
 		
-			<lastBuildDate>Sun, 12 Jul 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Sat, 25 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://www.cozycafecorner.com/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Hardware</title>
+				<link>https://www.cozycafecorner.com/tags/hardware/</link>
+				<pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/hardware/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Home Lab</title>
+				<link>https://www.cozycafecorner.com/tags/home-lab/</link>
+				<pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/home-lab/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Index</title>
+				<link>https://www.cozycafecorner.com/tags/index/</link>
+				<pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/index/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>IT Infrastructure</title>
+				<link>https://www.cozycafecorner.com/tags/it-infrastructure/</link>
+				<pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/it-infrastructure/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Linux</title>
+				<link>https://www.cozycafecorner.com/tags/linux/</link>
+				<pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/linux/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Mac Mini</title>
+				<link>https://www.cozycafecorner.com/tags/mac-mini/</link>
+				<pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/mac-mini/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>System Administration</title>
+				<link>https://www.cozycafecorner.com/tags/system-administration/</link>
+				<pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/system-administration/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Ubuntu</title>
+				<link>https://www.cozycafecorner.com/tags/ubuntu/</link>
+				<pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/ubuntu/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>Automation</title>
 				<link>https://www.cozycafecorner.com/tags/automation/</link>
@@ -46,13 +102,6 @@
 				<link>https://www.cozycafecorner.com/tags/github-actions/</link>
 				<pubDate>Sun, 12 Jul 2026 00:00:00 +0000</pubDate>
 				<guid>https://www.cozycafecorner.com/tags/github-actions/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Index</title>
-				<link>https://www.cozycafecorner.com/tags/index/</link>
-				<pubDate>Sun, 12 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>https://www.cozycafecorner.com/tags/index/</guid>
 				<description></description>
 			</item>
 			<item>

@@ -10,14 +10,21 @@
 		
 		
 		
-			<lastBuildDate>Sun, 12 Jul 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Sat, 25 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://www.cozycafecorner.com/index.xml" rel="self" type="application/rss+xml" />
 			<item>
+				<title>Giving New Life to a 2012 Mac mini</title>
+				<link>https://www.cozycafecorner.com/post/2026-07-25-newlifeformacmini/</link>
+				<pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/post/2026-07-25-newlifeformacmini/</guid>
+				<description>&lt;h1 id=&#34;giving-new-life-to-a-2012-mac-mini&#34;&gt;Giving New Life to a 2012 Mac mini&lt;/h1&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Like many IT professionals, I&amp;rsquo;ve accumulated a few older computers over the years.&lt;/p&gt;</description>
+			</item>
+			<item>
 				<title>Learning CI/CD as an IT Professional</title>
-				<link>https://www.cozycafecorner.com/post/206-07-12-understandingcicd/</link>
+				<link>https://www.cozycafecorner.com/post/2026-07-12-understandingcicd/</link>
 				<pubDate>Sun, 12 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>https://www.cozycafecorner.com/post/206-07-12-understandingcicd/</guid>
+				<guid>https://www.cozycafecorner.com/post/2026-07-12-understandingcicd/</guid>
 				<description>&lt;h1 id=&#34;learning-cicd-as-an-it-professional&#34;&gt;Learning CI/CD as an IT Professional&lt;/h1&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Although I have worked in software development, IT support, and infrastructure for many years, CI/CD is an area I have only recently started exploring in depth.&lt;/p&gt;</description>
 			</item>
 			<item>
