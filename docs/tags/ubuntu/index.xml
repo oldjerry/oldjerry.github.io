@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Sat, 25 Jul 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Thu, 06 Aug 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://www.cozycafecorner.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Installing Ubuntu Server on a 2012 Intel Mac mini</title>
+				<link>https://www.cozycafecorner.com/post/2026-08-06-installubuntuinmac/</link>
+				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/post/2026-08-06-installubuntuinmac/</guid>
+				<description>&lt;h1 id=&#34;installing-ubuntu-server-on-a-2012-intel-mac-mini&#34;&gt;Installing Ubuntu Server on a 2012 Intel Mac mini&lt;/h1&gt;&#xA;&lt;p&gt;In my previous article, I explained why I decided to repurpose my 2012 Mac mini instead of retiring it.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Giving New Life to a 2012 Mac mini</title>
 				<link>https://www.cozycafecorner.com/post/2026-07-25-newlifeformacmini/</link>
