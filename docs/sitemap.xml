@@ -3,36 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.cozycafecorner.com/post/</loc>
-    <lastmod>2026-08-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cozycafecorner.com/</loc>
-    <lastmod>2026-08-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cozycafecorner.com/tags/docker/</loc>
-    <lastmod>2026-08-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.cozycafecorner.com/tags/home-lab/</loc>
-    <lastmod>2026-08-06T00:00:00+00:00</lastmod>
+    <loc>https://www.cozycafecorner.com/tags/file-server/</loc>
+    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/post/2026-09-03-oldmacmini2ulinuxserver/</loc>
+    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/home-server/</loc>
+    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cozycafecorner.com/tags/index/</loc>
+    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/linux/</loc>
+    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/mac-mini/</loc>
+    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/print-server/</loc>
+    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/</loc>
+    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/ubuntu/</loc>
+    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/home-lab/</loc>
     <lastmod>2026-08-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cozycafecorner.com/post/2026-08-06-installubuntuinmacos/</loc>
     <lastmod>2026-08-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.cozycafecorner.com/tags/linux/</loc>
-    <lastmod>2026-08-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.cozycafecorner.com/tags/mac-mini/</loc>
-    <lastmod>2026-08-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.cozycafecorner.com/tags/system-administration/</loc>
-    <lastmod>2026-08-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.cozycafecorner.com/tags/</loc>
-    <lastmod>2026-08-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.cozycafecorner.com/tags/ubuntu/</loc>
     <lastmod>2026-08-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cozycafecorner.com/post/2026-07-25-newlifeformacmini/</loc>

@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    
+      <title>From an Old Mac mini to a Linux Home Server | Cozy Cafe Corner</title>
+    
+
+
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+    
+    
+      
+    
+    <meta name="description" content="After experimenting with macOS on my 2012 Mac mini, I finally decided to turn it into a Linux home server." />
+
+    
+    
+    <meta property="og:url" content="https://www.cozycafecorner.com/post/2026-09-03-oldmacmini2ulinuxserver/">
+	<meta property="og:site_name" content="Cozy Cafe Corner">
+	<meta property="og:title" content="From an Old Mac mini to a Linux Home Server">
+	<meta property="og:description" content="After experimenting with macOS on my 2012 Mac mini, I finally decided to turn it into a Linux home server.">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="post">
+		<meta property="article:published_time" content="2026-09-03T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-09-03T00:00:00+00:00">
+		<meta property="article:tag" content="Mac Mini">
+		<meta property="article:tag" content="Ubuntu">
+		<meta property="article:tag" content="Linux">
+		<meta property="article:tag" content="Home Server">
+		<meta property="article:tag" content="Docker">
+		<meta property="article:tag" content="File Server">
+		<meta property="og:image" content="https://www.cozycafecorner.com/images/hero-image.png">
+
+    
+	<meta itemprop="name" content="From an Old Mac mini to a Linux Home Server">
+	<meta itemprop="description" content="After experimenting with macOS on my 2012 Mac mini, I finally decided to turn it into a Linux home server.">
+	<meta itemprop="datePublished" content="2026-09-03T00:00:00+00:00">
+	<meta itemprop="dateModified" content="2026-09-03T00:00:00+00:00">
+	<meta itemprop="wordCount" content="1361">
+	<meta itemprop="image" content="https://www.cozycafecorner.com/images/hero-image.png">
+	<meta itemprop="keywords" content="Mac Mini,Ubuntu,Linux,Home Server,Docker,File Server,Print Server">
+    
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://www.cozycafecorner.com/images/hero-image.png">
+	<meta name="twitter:title" content="From an Old Mac mini to a Linux Home Server">
+	<meta name="twitter:description" content="After experimenting with macOS on my 2012 Mac mini, I finally decided to turn it into a Linux home server.">
+
+
+
+    
+    
+      <link rel="icon" type="image/x-icon" href="https://www.cozycafecorner.com/favicon.ico" />
+    
+
+    
+
+    
+
+    
+
+    
+      <link rel="manifest" href="https://www.cozycafecorner.com/site.webmanifest" />
+    
+
+    
+
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    
+    
+    
+      
+        
+          
+          
+            <link
+              rel="stylesheet"
+              href="/css/styles.6f3f3adb729829e2159d0016639d6022e9aa52454862e4d0392efd5245c6bc45.css"
+              integrity="sha256-bz8623KYKeIVnQAWY51gIumqUkVIYuTQOS79UkXGvEU="
+              crossorigin="anonymous"
+            />
+          
+        
+      
+    
+
+
+    
+    
+      
+        
+        
+          <link rel="stylesheet" href="/css/fonts.6777448b727bc66b52b18a918eab1ed6ac27e614b722b47ff58b488288728b50.css" integrity="sha256-Z3dEi3J7xmtSsYqRjqse1qwn5hS3IrR/9YtIgohyi1A=" crossorigin="anonymous" />
+        
+      
+    
+
+
+    
+        
+      
+      <script src="/js/main.7b57960741aab0c5345ed2de96e3271beece68496732534388fb608dad5f5490.min.js" defer></script>
+    
+
+    <link rel="canonical" href="https://www.cozycafecorner.com/post/2026-09-03-oldmacmini2ulinuxserver/">
+    
+  </head>
+  <body class="">
+    <div class="flex min-h-screen flex-col">
+      <nav class="">
+  <div class="container mx-auto flex items-center justify-between px-4 py-6">
+    <a class="flex items-center" href="https://www.cozycafecorner.com/">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<img
+  src="https://www.cozycafecorner.com/images/logo.png"
+  width="500"
+  height="500"
+  
+  
+  class="size-6 xl:size-8"
+  alt="map[class:size-6 xl:size-8 src:images/logo.png]"
+/>
+
+      <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+    </a>
+    <button
+      class="cursor-pointer xl:hidden"
+      type="button"
+      data-toggle-target="#navbarContent"
+      data-toggle-class="-translate-y-full"
+      aria-label="Toggle Navigation"
+    >
+      <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+  />
+</svg>
+
+
+    </button>
+    <div
+      class="fixed inset-0 flex -translate-y-full flex-col items-center justify-center gap-8 bg-white duration-500 xl:relative xl:translate-y-0 xl:flex-row"
+      id="navbarContent"
+    >
+      <div class="container absolute top-0 mx-auto flex items-center justify-between px-4 py-6 xl:hidden">
+        <a class="flex items-center xl:hidden" href="https://www.cozycafecorner.com/">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<img
+  src="https://www.cozycafecorner.com/images/logo.png"
+  width="500"
+  height="500"
+  
+  
+  class="size-6 xl:size-8"
+  alt="map[class:size-6 xl:size-8 src:images/logo.png]"
+/>
+
+          <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+        </a>
+        <button
+          class="cursor-pointer xl:hidden"
+          type="button"
+          data-toggle-target="#navbarContent"
+          data-toggle-class="-translate-y-full"
+          aria-label="Toggle Navigation"
+        >
+          <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
+
+        </button>
+      </div>
+      <ul class="flex flex-col gap-8 xl:flex-row">
+        
+          <li class="text-center">
+            <a class="text-primary" href="/#hero/">Home</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/services/services/">Services</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/blog/">Blog</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/about/about/">About</a>
+          </li>
+        
+      </ul>
+      <ul class="flex flex-col gap-8 xl:flex-row">
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      <div class="grow">
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      
+        <h2 class="text-primary mb-16 text-center text-6xl font-bold">From an Old Mac mini to a Linux Home Server</h2>
+      
+      
+        <p class="mx-auto mb-16 text-center xl:max-w-[50%]">After experimenting with macOS on my 2012 Mac mini, I finally decided to turn it into a Linux home server.</p>
+      
+      
+        <div class="prose prose-lg mx-auto">
+          <p>After spending some time thinking about how to reuse my old 2012 Mac mini, I finally made a decision:</p>
+<p><strong>I am going to turn it into an Ubuntu Linux server.</strong></p>
+<p>This was not my original plan.</p>
+<p>When I started this project, I thought the Mac mini might still be useful as a lightweight macOS machine or perhaps even a small home server. After installing macOS Monterey and experimenting with it, however, I realized that Linux would be a much better fit for what I actually want to do.</p>
+<h2 id="why-ubuntu">Why Ubuntu?</h2>
+<p>There are several reasons behind this decision.</p>
+<h3 id="1-macos-monterey-is-becoming-too-old">1. macOS Monterey is becoming too old</h3>
+<p>The 2012 Mac mini is limited to older versions of macOS.</p>
+<p>Although macOS Monterey still works, many modern applications are gradually dropping support for older macOS versions. This makes the machine less useful as a general-purpose desktop computer.</p>
+<p>For a server, however, the situation is different.</p>
+<p>I don&rsquo;t need a graphical desktop environment, and I don&rsquo;t need to run modern macOS applications.</p>
+<p>What I really need is a stable operating system that can run services continuously.</p>
+<p>Linux is a much better match for that requirement.</p>
+<h3 id="2-a-graphical-desktop-is-unnecessary-for-a-server">2. A graphical desktop is unnecessary for a server</h3>
+<p>A server doesn&rsquo;t need a desktop environment.</p>
+<p>Running a full graphical interface consumes additional CPU, memory, storage and background resources. On an old Mac mini, those resources are better used by the services I actually want to run.</p>
+<p>With Ubuntu Server, I can manage the machine primarily through SSH.</p>
+<p>That also makes the system easier to administer remotely.</p>
+<p>Instead of thinking of the Mac mini as an old computer that happens to be running Linux, I can start treating it like a real server.</p>
+<h3 id="3-linux-gives-me-much-more-flexibility">3. Linux gives me much more flexibility</h3>
+<p>Another important reason is flexibility.</p>
+<p>I already use Linux, Docker and networking technologies in my home lab, so Ubuntu fits naturally into the environment I already have.</p>
+<p>Linux also gives me access to a huge ecosystem of server software, open-source projects and documentation.</p>
+<p>More importantly, I can install exactly what I need instead of maintaining a desktop operating system that provides many features I don&rsquo;t need.</p>
+<p>This is especially useful for a machine that is going to run continuously.</p>
+<h2 id="the-unexpected-reason-my-old-printer">The unexpected reason: my old printer</h2>
+<p>There is another very practical reason for choosing Linux.</p>
+<p>I still have a <strong>Fuji-Xerox DocuPrint CP105b</strong> color laser printer.</p>
+<p>The printer is old, but it still works.</p>
+<p>The problem is that the manufacturer no longer provides current drivers for modern operating systems. The official support page now identifies the CP105b as an End of Service product.</p>
+<p>While researching possible solutions, I found an open-source HBPLv1 printer driver project.</p>
+<p>The CP105b uses Fuji-Xerox&rsquo;s Host Based Printer Language (HBPL), and the open-source Linux driver supports this printer.</p>
+<p>This was actually one of the things that convinced me that turning the Mac mini into a Linux server made sense.</p>
+<p>Instead of replacing a perfectly usable printer simply because its original driver is obsolete, I can use the Mac mini as a dedicated print server.</p>
+<p>The printer can then become a network printer for the other computers on my home network.</p>
+<p>This is a good example of why old hardware can sometimes still be useful.</p>
+<p>The hardware itself isn&rsquo;t necessarily the problem.</p>
+<p>Often, the real problem is software support.</p>
+<h2 id="the-new-role-of-the-mac-mini">The new role of the Mac mini</h2>
+<p>So the purpose of this old Mac mini has changed quite a bit.</p>
+<p>It is no longer going to be my old desktop computer.</p>
+<p>Instead, I want to turn it into a small home server with several roles.</p>
+<h3 id="file-server">File Server</h3>
+<p>The first role will be a file server.</p>
+<p>I want the Mac mini to provide shared storage for computers on my local network.</p>
+<p>This will give me a simple place to store files and exchange data between different machines.</p>
+<p>I also want to keep the storage architecture simple.</p>
+<p>The goal is not to build a NAS with enterprise-level features.</p>
+<p>It is simply to make use of hardware that I already have.</p>
+<h3 id="docker-server">Docker Server</h3>
+<p>The second role will be a Docker host.</p>
+<p>I already use Docker in my home lab, so running containers on this machine will be useful for experimenting with different services.</p>
+<p>For example, I could use it for:</p>
+<ul>
+<li>Home lab services</li>
+<li>Monitoring</li>
+<li>Development environments</li>
+<li>Small web applications</li>
+<li>Utility services</li>
+<li>Testing new Docker images</li>
+</ul>
+<p>This is probably where the Mac mini will become much more interesting than its original purpose.</p>
+<p>Instead of installing every application directly onto the operating system, I can keep many services isolated inside containers.</p>
+<h3 id="print-server">Print Server</h3>
+<p>The third role will be the print server.</p>
+<p>This is the most specific requirement.</p>
+<p>I want Ubuntu to run CUPS and the HBPLv1 driver, allowing the old Fuji-Xerox printer to be shared over the network.</p>
+<p>The basic architecture should be straightforward:</p>
+<p>My computers will send print jobs to the Ubuntu server.</p>
+<p>The Ubuntu server will handle the printer queue and driver.</p>
+<p>The physical printer will only need to be connected to the server.</p>
+<p>This means I don&rsquo;t need to install the legacy printer driver on every computer in the house.</p>
+<p>It also gives the old printer a new life as a network printer.</p>
+<h2 id="what-about-the-mac-mini-hardware">What about the Mac mini hardware?</h2>
+<p>The machine is old, but it is still a relatively capable little computer for a home server.</p>
+<p>It has several characteristics that make it interesting for this project:</p>
+<ul>
+<li>Intel x86-64 architecture</li>
+<li>Compact form factor</li>
+<li>Relatively low power consumption</li>
+<li>Built-in Ethernet</li>
+<li>Multiple USB ports</li>
+<li>Ability to run Linux</li>
+<li>Enough CPU and memory for lightweight server workloads</li>
+</ul>
+<p>Of course, I don&rsquo;t expect it to compete with a modern server.</p>
+<p>That&rsquo;s not the point.</p>
+<p>The goal is to find a useful job for hardware that would otherwise probably sit unused.</p>
+<p>For a file server, Docker host and print server, the performance should be more than adequate for my home environment.</p>
+<h2 id="the-new-architecture">The new architecture</h2>
+<p>I am now thinking about the Mac mini as a small infrastructure node rather than a personal computer.</p>
+<p>The plan is roughly:</p>
+<p><strong>Mac mini → Ubuntu Server</strong></p>
+<p>Running:</p>
+<ul>
+<li>File sharing</li>
+<li>Docker</li>
+<li>CUPS</li>
+<li>HBPLv1 printer driver</li>
+</ul>
+<p>And potentially other lightweight services in the future.</p>
+<p>This also fits nicely with my existing home lab.</p>
+<p>I can manage the machine remotely, monitor it, update it and experiment with different services without needing to connect a monitor or keyboard.</p>
+<h2 id="what-i-want-to-learn-from-this-project">What I want to learn from this project</h2>
+<p>There is another reason I like this project.</p>
+<p>It gives me an opportunity to practice Linux server administration in a realistic environment.</p>
+<p>Instead of simply installing Ubuntu and running a few commands, I want to treat the machine like a real server.</p>
+<p>That means thinking about:</p>
+<ul>
+<li>Network configuration</li>
+<li>Static IP addressing</li>
+<li>SSH access</li>
+<li>User and permission management</li>
+<li>Storage</li>
+<li>File sharing</li>
+<li>Docker</li>
+<li>Service management</li>
+<li>Logging</li>
+<li>Updates</li>
+<li>Backups</li>
+<li>Monitoring</li>
+<li>Security</li>
+</ul>
+<p>These are all practical skills that are useful beyond a home lab.</p>
+<p>And because this is my own server, I can experiment without worrying about breaking a production system.</p>
+<p>If something goes wrong, I can troubleshoot it, rebuild it and document what I learned.</p>
+<h2 id="from-an-obsolete-mac-to-a-useful-server">From an obsolete Mac to a useful server</h2>
+<p>Looking back, I think the most interesting part of this project isn&rsquo;t actually installing Ubuntu.</p>
+<p>It is changing the way I think about old hardware.</p>
+<p>A 2012 Mac mini is no longer a particularly useful modern desktop computer.</p>
+<p>But that doesn&rsquo;t mean the hardware is useless.</p>
+<p>Once I remove the requirement to run modern desktop applications, the machine becomes much more interesting.</p>
+<p>It can become a small Linux server.</p>
+<p>It can host Docker containers.</p>
+<p>It can provide network file sharing.</p>
+<p>It can become a print server for an old printer that is still perfectly functional.</p>
+<p>And, perhaps most importantly, it becomes another piece of infrastructure that I can use to learn.</p>
+<p>That&rsquo;s the direction I want to take with this Mac mini project.</p>
+<p>The next step is to install Ubuntu Server and start building the machine piece by piece.</p>
+<p>I don&rsquo;t want to install everything at once.</p>
+<p>I&rsquo;ll start with the operating system, networking and SSH, then gradually add file sharing, Docker and the print server.</p>
+<p>That should make the project much easier to troubleshoot — and much more interesting to document.</p>
+
+        </div>
+      
+    </div>
+  </section>
+</div>
+      <footer class="bg-tertiary/25 py-16">
+  <div class="container mx-auto px-4">
+    <div class="mb-8 grid gap-8 xl:grid-cols-12">
+      <div class="flex flex-col items-center gap-4 xl:col-span-4 xl:items-start">
+        <a class="flex items-center" href="https://www.cozycafecorner.com/">
+          <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+        </a>
+        <p class="text-center text-sm xl:text-start">Specializing in IT solutions, web development, and infrastructure maintenance for your business.</p>
+        
+      </div>
+      <div class="xl:col-span-2">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">About us</h2>
+        <ul class="flex flex-col gap-1 text-sm">
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/#hero">Home</a>
+            </li>
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/services/services/">Services</a>
+            </li>
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/blog/">Blog</a>
+            </li>
+          
+        </ul>
+      </div>
+      <div class="xl:col-span-3">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">Location</h2>
+        <ul class="flex flex-col gap-3 text-sm">
+          
+            <li class="flex flex-col items-center gap-4 xl:flex-row">
+              <span class="text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg>
+</span>
+              <span class="text-center xl:text-start">Richmond, BC, Canada</span>
+            </li>
+          
+        </ul>
+      </div>
+      <div class="xl:col-span-3">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">Contact Us</h2>
+        <ul class="flex flex-col gap-1 text-sm">
+          
+            <li class="text-center xl:text-start">jerrysun.work@hotmail.com</li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-sm">
+      <div class="">
+        
+          <p class="">© 2026 Cozy Cafe Corner All Rights Reserved</p>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>

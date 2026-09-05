@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Thu, 06 Aug 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Thu, 03 Sep 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://www.cozycafecorner.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>From an Old Mac mini to a Linux Home Server</title>
+				<link>https://www.cozycafecorner.com/post/2026-09-03-oldmacmini2ulinuxserver/</link>
+				<pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/post/2026-09-03-oldmacmini2ulinuxserver/</guid>
+				<description>&lt;p&gt;After spending some time thinking about how to reuse my old 2012 Mac mini, I finally made a decision:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;I am going to turn it into an Ubuntu Linux server.&lt;/strong&gt;&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Installing Ubuntu Server on a 2012 Intel Mac mini</title>
 				<link>https://www.cozycafecorner.com/post/2026-08-06-installubuntuinmacos/</link>
