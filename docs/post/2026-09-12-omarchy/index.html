@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    
+      <title>From Ubuntu to Omarchy: Linux, CLI, and Learning in the Age of AI | Cozy Cafe Corner</title>
+    
+
+
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+    
+    
+      
+    
+    <meta name="description" content="Discovering Omarchy after installing Ubuntu made me think about Linux, command-line interfaces, and how AI is changing the way we learn technology." />
+
+    
+    
+    <meta property="og:url" content="https://www.cozycafecorner.com/post/2026-09-12-omarchy/">
+	<meta property="og:site_name" content="Cozy Cafe Corner">
+	<meta property="og:title" content="From Ubuntu to Omarchy: Linux, CLI, and Learning in the Age of AI">
+	<meta property="og:description" content="Discovering Omarchy after installing Ubuntu made me think about Linux, command-line interfaces, and how AI is changing the way we learn technology.">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="post">
+		<meta property="article:published_time" content="2026-09-12T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-09-12T00:00:00+00:00">
+		<meta property="article:tag" content="Linux">
+		<meta property="article:tag" content="Ubuntu">
+		<meta property="article:tag" content="Omarchy">
+		<meta property="article:tag" content="CLI">
+		<meta property="article:tag" content="AI">
+		<meta property="article:tag" content="Learning">
+		<meta property="og:image" content="https://www.cozycafecorner.com/images/hero-image.png">
+
+    
+	<meta itemprop="name" content="From Ubuntu to Omarchy: Linux, CLI, and Learning in the Age of AI">
+	<meta itemprop="description" content="Discovering Omarchy after installing Ubuntu made me think about Linux, command-line interfaces, and how AI is changing the way we learn technology.">
+	<meta itemprop="datePublished" content="2026-09-12T00:00:00+00:00">
+	<meta itemprop="dateModified" content="2026-09-12T00:00:00+00:00">
+	<meta itemprop="wordCount" content="1630">
+	<meta itemprop="image" content="https://www.cozycafecorner.com/images/hero-image.png">
+	<meta itemprop="keywords" content="Linux,Ubuntu,Omarchy,CLI,AI,Learning,Homelab">
+    
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://www.cozycafecorner.com/images/hero-image.png">
+	<meta name="twitter:title" content="From Ubuntu to Omarchy: Linux, CLI, and Learning in the Age of AI">
+	<meta name="twitter:description" content="Discovering Omarchy after installing Ubuntu made me think about Linux, command-line interfaces, and how AI is changing the way we learn technology.">
+
+
+
+    
+    
+      <link rel="icon" type="image/x-icon" href="https://www.cozycafecorner.com/favicon.ico" />
+    
+
+    
+
+    
+
+    
+
+    
+      <link rel="manifest" href="https://www.cozycafecorner.com/site.webmanifest" />
+    
+
+    
+
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    
+    
+    
+      
+        
+          
+          
+            <link
+              rel="stylesheet"
+              href="/css/styles.6f3f3adb729829e2159d0016639d6022e9aa52454862e4d0392efd5245c6bc45.css"
+              integrity="sha256-bz8623KYKeIVnQAWY51gIumqUkVIYuTQOS79UkXGvEU="
+              crossorigin="anonymous"
+            />
+          
+        
+      
+    
+
+
+    
+    
+      
+        
+        
+          <link rel="stylesheet" href="/css/fonts.6777448b727bc66b52b18a918eab1ed6ac27e614b722b47ff58b488288728b50.css" integrity="sha256-Z3dEi3J7xmtSsYqRjqse1qwn5hS3IrR/9YtIgohyi1A=" crossorigin="anonymous" />
+        
+      
+    
+
+
+    
+        
+      
+      <script src="/js/main.7b57960741aab0c5345ed2de96e3271beece68496732534388fb608dad5f5490.min.js" defer></script>
+    
+
+    <link rel="canonical" href="https://www.cozycafecorner.com/post/2026-09-12-omarchy/">
+    
+  </head>
+  <body class="">
+    <div class="flex min-h-screen flex-col">
+      <nav class="">
+  <div class="container mx-auto flex items-center justify-between px-4 py-6">
+    <a class="flex items-center" href="https://www.cozycafecorner.com/">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<img
+  src="https://www.cozycafecorner.com/images/logo.png"
+  width="500"
+  height="500"
+  
+  
+  class="size-6 xl:size-8"
+  alt="map[class:size-6 xl:size-8 src:images/logo.png]"
+/>
+
+      <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+    </a>
+    <button
+      class="cursor-pointer xl:hidden"
+      type="button"
+      data-toggle-target="#navbarContent"
+      data-toggle-class="-translate-y-full"
+      aria-label="Toggle Navigation"
+    >
+      <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+  />
+</svg>
+
+
+    </button>
+    <div
+      class="fixed inset-0 flex -translate-y-full flex-col items-center justify-center gap-8 bg-white duration-500 xl:relative xl:translate-y-0 xl:flex-row"
+      id="navbarContent"
+    >
+      <div class="container absolute top-0 mx-auto flex items-center justify-between px-4 py-6 xl:hidden">
+        <a class="flex items-center xl:hidden" href="https://www.cozycafecorner.com/">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<img
+  src="https://www.cozycafecorner.com/images/logo.png"
+  width="500"
+  height="500"
+  
+  
+  class="size-6 xl:size-8"
+  alt="map[class:size-6 xl:size-8 src:images/logo.png]"
+/>
+
+          <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+        </a>
+        <button
+          class="cursor-pointer xl:hidden"
+          type="button"
+          data-toggle-target="#navbarContent"
+          data-toggle-class="-translate-y-full"
+          aria-label="Toggle Navigation"
+        >
+          <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
+
+        </button>
+      </div>
+      <ul class="flex flex-col gap-8 xl:flex-row">
+        
+          <li class="text-center">
+            <a class="text-primary" href="/#hero/">Home</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/services/services/">Services</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/blog/">Blog</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/about/about/">About</a>
+          </li>
+        
+      </ul>
+      <ul class="flex flex-col gap-8 xl:flex-row">
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      <div class="grow">
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      
+        <h2 class="text-primary mb-16 text-center text-6xl font-bold">From Ubuntu to Omarchy: Linux, CLI, and Learning in the Age of AI</h2>
+      
+      
+        <p class="mx-auto mb-16 text-center xl:max-w-[50%]">Discovering Omarchy after installing Ubuntu made me think about Linux, command-line interfaces, and how AI is changing the way we learn technology.</p>
+      
+      
+        <div class="prose prose-lg mx-auto">
+          <p>After finishing the Ubuntu installation on my old Mac mini, I started looking at what was happening in the Linux world.</p>
+<p>That&rsquo;s when I discovered <strong>Omarchy</strong>.</p>
+<p>I had seen Linux distributions before, of course. But Omarchy immediately caught my attention.</p>
+<p>Not just because of how it looks.</p>
+<p>It was the feeling of using a computer that brought me back to something I hadn&rsquo;t experienced for a long time.</p>
+<h2 id="from-dos-to-linux-then-windows-and-macos">From DOS to Linux, then Windows and macOS</h2>
+<p>My first experience with personal computers was with DOS.</p>
+<p>There was no graphical desktop like we have today.</p>
+<p>You typed commands.</p>
+<p>You had to know what you were doing, or at least know where to look for the right command.</p>
+<p>Later, I started using Linux.</p>
+<p>Linux introduced me to another world of command-line tools, shell scripts, configuration files and remote administration.</p>
+<p>Eventually, like most people, I spent many years using Windows and macOS as my primary desktop operating systems.</p>
+<p>Of course, I never really left the command line behind.</p>
+<p>Even while using Windows and macOS, I continued to use the CLI for server administration, SSH, networking, scripting and other technical work.</p>
+<p>But the desktop itself became increasingly graphical.</p>
+<p>Click an application.</p>
+<p>Open a settings panel.</p>
+<p>Change an option.</p>
+<p>Click Apply.</p>
+<p>It is convenient, and there is nothing wrong with that.</p>
+<p>But when I saw Omarchy, I realized that I actually missed something from the old way of using computers.</p>
+<h2 id="discovering-omarchy">Discovering Omarchy</h2>
+<p>Omarchy is an Arch Linux-based distribution built around Hyprland and Quickshell.</p>
+<p>It has a very different philosophy from Windows or macOS.</p>
+<p>The system is heavily keyboard-driven and terminal-oriented. Configuration is largely based on files, commands and shortcuts rather than traditional graphical settings panels.</p>
+<p>The official documentation describes it as a system that is intentionally heavy on the terminal and encourages users to edit configuration files themselves.</p>
+<p>That immediately caught my attention.</p>
+<p>It felt strangely familiar.</p>
+<p>It reminded me of the computers I used when I was much younger.</p>
+<p>Not because Omarchy looks like DOS.</p>
+<p>It obviously doesn&rsquo;t.</p>
+<p>But because the computer feels more like something you operate directly rather than something you simply click on.</p>
+<p>And I like that.</p>
+<h2 id="a-cli-oriented-desktop-feels-surprisingly-refreshing">A CLI-oriented desktop feels surprisingly refreshing</h2>
+<p>I normally wouldn&rsquo;t say that I miss a command-line interface.</p>
+<p>I use SSH regularly.</p>
+<p>I configure Linux servers.</p>
+<p>I write shell scripts.</p>
+<p>I work with Docker and networking tools.</p>
+<p>So the CLI has never really disappeared from my life.</p>
+<p>But there is a difference between <strong>using the CLI because you need it</strong> and <strong>building your whole desktop experience around it</strong>.</p>
+<p>That&rsquo;s what I find interesting about Omarchy.</p>
+<p>The keyboard becomes the primary way to navigate.</p>
+<p>Applications can be launched through shortcuts.</p>
+<p>Windows are managed through a tiling window manager.</p>
+<p>Configuration lives in text files.</p>
+<p>The terminal is not just a tool for fixing something when the GUI fails.</p>
+<p>It becomes part of the user interface.</p>
+<p>And honestly, I find that quite exciting.</p>
+<p>Maybe that&rsquo;s because I started with DOS and Linux.</p>
+<p>There is something nostalgic about it.</p>
+<p>But I don&rsquo;t think nostalgia is the only reason.</p>
+<p>There is also a feeling of being closer to the computer itself.</p>
+<h2 id="the-interesting-contradiction-omarchy-and-ai">The interesting contradiction: Omarchy and AI</h2>
+<p>There is another reason Omarchy caught my attention.</p>
+<p>Ironically, while it brings back a very CLI-oriented way of interacting with a computer, it is also designed for the age of AI.</p>
+<p>Omarchy currently treats AI coding agents as first-class citizens.</p>
+<p>Its environment includes launchers for several AI coding agents, including Claude Code, OpenAI Codex, OpenCode and GitHub Copilot CLI.</p>
+<p>It even provides CLI commands and workflows specifically designed around working with these agents.</p>
+<p>This combination is fascinating to me.</p>
+<p>A very traditional way of interacting with a computer — the terminal — is being combined with something completely new.</p>
+<p>AI can now operate inside the terminal alongside us.</p>
+<p>That made me start thinking about something else.</p>
+<h2 id="how-did-we-learn-computers-before-ai">How did we learn computers before AI?</h2>
+<p>When I first learned Linux and shell scripting, learning was much slower than it is today.</p>
+<p>If I wanted to understand a Linux command, I might need to find a book.</p>
+<p>If I wanted to learn shell scripting, I might need another book or a good tutorial.</p>
+<p>There was already information on the Internet, of course, but finding the right information wasn&rsquo;t always easy.</p>
+<p>Sometimes I had to read several pages before finding the answer I needed.</p>
+<p>Sometimes the answer wasn&rsquo;t there at all.</p>
+<p>Sometimes I just had to experiment.</p>
+<p>It was frustrating.</p>
+<p>But there was also something valuable about that process.</p>
+<p>I had to read.</p>
+<p>I had to think.</p>
+<p>I had to try something.</p>
+<p>It didn&rsquo;t work.</p>
+<p>I had to figure out why.</p>
+<p>Then I tried again.</p>
+<p>Eventually, I remembered what I had learned.</p>
+<p>The process was slower, but it forced me to build a mental model of how things worked.</p>
+<h2 id="ai-has-changed-everything">AI has changed everything</h2>
+<p>Today, I can ask an AI a question in seconds.</p>
+<p>I can paste an error message into ChatGPT and ask what it means.</p>
+<p>I can ask for a Linux command.</p>
+<p>I can ask for a shell script.</p>
+<p>I can ask for an explanation of a configuration file.</p>
+<p>I can even ask an AI agent to make the change for me.</p>
+<p>This is incredibly powerful.</p>
+<p>And I use AI myself.</p>
+<p>I don&rsquo;t think we should go back to a world where we deliberately make learning harder just because it was harder in the past.</p>
+<p>AI is an amazing learning tool.</p>
+<p>But I think there is an important question we need to ask:</p>
+<p><strong>What happens if we always let AI solve the problem for us?</strong></p>
+<h2 id="solving-a-problem-is-not-always-the-same-as-learning">Solving a problem is not always the same as learning</h2>
+<p>Imagine I have a Linux problem.</p>
+<p>I could ask:</p>
+<blockquote>
+<p>&ldquo;Give me the command to fix this.&rdquo;</p>
+</blockquote>
+<p>The AI gives me a command.</p>
+<p>I run it.</p>
+<p>The problem disappears.</p>
+<p>Done.</p>
+<p>But what did I actually learn?</p>
+<p>Maybe nothing.</p>
+<p>A better question might be:</p>
+<blockquote>
+<p>&ldquo;Explain why this is happening first. Then show me how to fix it.&rdquo;</p>
+</blockquote>
+<p>Or even:</p>
+<blockquote>
+<p>&ldquo;Don&rsquo;t give me the answer yet. Give me a hint so I can figure it out.&rdquo;</p>
+</blockquote>
+<p>That changes the role of AI.</p>
+<p>Instead of replacing the learning process, AI becomes part of the learning process.</p>
+<p>This distinction is becoming more important as AI gets better.</p>
+<h2 id="i-dont-want-to-stop-using-ai">I don&rsquo;t want to stop using AI</h2>
+<p>I&rsquo;m not arguing against AI.</p>
+<p>Quite the opposite.</p>
+<p>I think AI can make learning technology much more accessible.</p>
+<p>When I get stuck on something today, I can have a conversation about it.</p>
+<p>I can ask follow-up questions.</p>
+<p>I can ask for another explanation.</p>
+<p>I can ask for an example.</p>
+<p>I can ask why the first solution didn&rsquo;t work.</p>
+<p>That is something I couldn&rsquo;t easily do with a textbook.</p>
+<p>The problem isn&rsquo;t using AI.</p>
+<p>The problem is <strong>stopping thinking because AI is available</strong>.</p>
+<p>I want AI to help me understand more, not understand less.</p>
+<h2 id="why-linux-still-matters">Why Linux still matters</h2>
+<p>This is one reason I still enjoy Linux.</p>
+<p>Linux exposes more of the underlying system.</p>
+<p>Configuration files are often plain text.</p>
+<p>Commands can be combined.</p>
+<p>Scripts can automate repetitive tasks.</p>
+<p>Services can be inspected.</p>
+<p>Logs can be read.</p>
+<p>Networks can be tested.</p>
+<p>Processes can be examined.</p>
+<p>You can make a change and see what happens.</p>
+<p>You can break something.</p>
+<p>Then you can try to understand why you broke it.</p>
+<p>That process is part of the fun.</p>
+<p>And I think it is also part of learning.</p>
+<h2 id="maybe-thats-why-omarchy-caught-my-attention">Maybe that&rsquo;s why Omarchy caught my attention</h2>
+<p>I haven&rsquo;t switched to Omarchy.</p>
+<p>At least not yet.</p>
+<p>My current project is still the Ubuntu server running on my old Mac mini.</p>
+<p>That machine has a practical purpose:</p>
+<ul>
+<li>File server</li>
+<li>Docker server</li>
+<li>Print server</li>
+<li>Linux learning environment</li>
+</ul>
+<p>But discovering Omarchy made me curious about another side of Linux.</p>
+<p>It reminded me that an operating system doesn&rsquo;t have to behave like Windows or macOS.</p>
+<p>It can be designed around a different philosophy.</p>
+<p>It can put the keyboard first.</p>
+<p>It can put the terminal at the center.</p>
+<p>It can make configuration files part of the normal user experience.</p>
+<p>And at the same time, it can embrace modern AI tools.</p>
+<p>That combination is something I want to explore.</p>
+<h2 id="the-old-mac-mini-project-comes-full-circle">The old Mac mini project comes full circle</h2>
+<p>When I started this series, my goal was simply to find a new use for an old 2012 Mac mini.</p>
+<p>I considered keeping macOS.</p>
+<p>I considered using it as a lightweight home computer.</p>
+<p>Eventually, I decided that Ubuntu Server made much more sense.</p>
+<p>The machine is now becoming something much more useful:</p>
+<p>a small Linux server that I can actually learn from.</p>
+<p>And then, almost unexpectedly, that project led me to Omarchy and to a much bigger question about how we interact with computers.</p>
+<p>Maybe that&rsquo;s what I like most about projects like this.</p>
+<p>You start with an old computer.</p>
+<p>You install an operating system.</p>
+<p>You configure a few services.</p>
+<p>And somewhere along the way, you start thinking about technology in a completely different way.</p>
+<h2 id="keep-the-curiosity">Keep the curiosity</h2>
+<p>I don&rsquo;t think the future is about choosing between humans and AI.</p>
+<p>I think the important thing is to keep the curiosity that made us want to understand computers in the first place.</p>
+<p>AI can help us learn faster.</p>
+<p>It can explain things.</p>
+<p>It can give us ideas.</p>
+<p>It can help us troubleshoot.</p>
+<p>It can even write the code and commands for us.</p>
+<p>But sometimes, I still want to know what the command actually does.</p>
+<p>I still want to know why the configuration works.</p>
+<p>I still want to understand what happens underneath the GUI.</p>
+<p>And sometimes, I still want to break something and fix it myself.</p>
+<p>Maybe that&rsquo;s why I still enjoy Linux.</p>
+<p>And maybe that&rsquo;s why seeing a modern, highly CLI-oriented desktop like Omarchy made me smile.</p>
+<p>After all these years, the command line still feels a little bit like home.</p>
+
+        </div>
+      
+    </div>
+  </section>
+</div>
+      <footer class="bg-tertiary/25 py-16">
+  <div class="container mx-auto px-4">
+    <div class="mb-8 grid gap-8 xl:grid-cols-12">
+      <div class="flex flex-col items-center gap-4 xl:col-span-4 xl:items-start">
+        <a class="flex items-center" href="https://www.cozycafecorner.com/">
+          <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+        </a>
+        <p class="text-center text-sm xl:text-start">Specializing in IT solutions, web development, and infrastructure maintenance for your business.</p>
+        
+      </div>
+      <div class="xl:col-span-2">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">About us</h2>
+        <ul class="flex flex-col gap-1 text-sm">
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/#hero">Home</a>
+            </li>
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/services/services/">Services</a>
+            </li>
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/blog/">Blog</a>
+            </li>
+          
+        </ul>
+      </div>
+      <div class="xl:col-span-3">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">Location</h2>
+        <ul class="flex flex-col gap-3 text-sm">
+          
+            <li class="flex flex-col items-center gap-4 xl:flex-row">
+              <span class="text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg>
+</span>
+              <span class="text-center xl:text-start">Richmond, BC, Canada</span>
+            </li>
+          
+        </ul>
+      </div>
+      <div class="xl:col-span-3">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">Contact Us</h2>
+        <ul class="flex flex-col gap-1 text-sm">
+          
+            <li class="text-center xl:text-start">jerrysun.work@hotmail.com</li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-sm">
+      <div class="">
+        
+          <p class="">© 2026 Cozy Cafe Corner All Rights Reserved</p>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>

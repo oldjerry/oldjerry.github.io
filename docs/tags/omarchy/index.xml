@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Omarchy on Cozy Cafe Corner</title>
+		<link>https://www.cozycafecorner.com/tags/omarchy/</link>
+		<description>Recent content in Omarchy on Cozy Cafe Corner</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 12 Sep 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://www.cozycafecorner.com/tags/omarchy/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>From Ubuntu to Omarchy: Linux, CLI, and Learning in the Age of AI</title>
+				<link>https://www.cozycafecorner.com/post/2026-09-12-omarchy/</link>
+				<pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/post/2026-09-12-omarchy/</guid>
+				<description>&lt;p&gt;After finishing the Ubuntu installation on my old Mac mini, I started looking at what was happening in the Linux world.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
