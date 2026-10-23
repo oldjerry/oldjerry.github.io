@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    
+      <title>Reviving an Old Fuji-Xerox Printer with Linux, CUPS, and AirPrint | Cozy Cafe Corner</title>
+    
+
+
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+    
+    
+      
+    
+    <meta name="description" content="How I turned a 2012 Mac mini into a Linux print server for a Fuji-Xerox DocuPrint CP105b using an open-source HBPLv1 driver, CUPS, and AirPrint." />
+
+    
+    
+    <meta property="og:url" content="https://www.cozycafecorner.com/post/2026-10-23-cupsprinter/">
+	<meta property="og:site_name" content="Cozy Cafe Corner">
+	<meta property="og:title" content="Reviving an Old Fuji-Xerox Printer with Linux, CUPS, and AirPrint">
+	<meta property="og:description" content="How I turned a 2012 Mac mini into a Linux print server for a Fuji-Xerox DocuPrint CP105b using an open-source HBPLv1 driver, CUPS, and AirPrint.">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="post">
+		<meta property="article:published_time" content="2026-10-23T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-10-23T00:00:00+00:00">
+		<meta property="article:tag" content="Linux">
+		<meta property="article:tag" content="Debian">
+		<meta property="article:tag" content="Ubuntu">
+		<meta property="article:tag" content="Mac Mini">
+		<meta property="article:tag" content="CUPS">
+		<meta property="article:tag" content="AirPrint">
+		<meta property="og:image" content="https://www.cozycafecorner.com/images/hero-image.png">
+
+    
+	<meta itemprop="name" content="Reviving an Old Fuji-Xerox Printer with Linux, CUPS, and AirPrint">
+	<meta itemprop="description" content="How I turned a 2012 Mac mini into a Linux print server for a Fuji-Xerox DocuPrint CP105b using an open-source HBPLv1 driver, CUPS, and AirPrint.">
+	<meta itemprop="datePublished" content="2026-10-23T00:00:00+00:00">
+	<meta itemprop="dateModified" content="2026-10-23T00:00:00+00:00">
+	<meta itemprop="wordCount" content="2026">
+	<meta itemprop="image" content="https://www.cozycafecorner.com/images/hero-image.png">
+	<meta itemprop="keywords" content="Linux,Debian,Ubuntu,Mac Mini,CUPS,AirPrint,Open Source,Printer">
+    
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://www.cozycafecorner.com/images/hero-image.png">
+	<meta name="twitter:title" content="Reviving an Old Fuji-Xerox Printer with Linux, CUPS, and AirPrint">
+	<meta name="twitter:description" content="How I turned a 2012 Mac mini into a Linux print server for a Fuji-Xerox DocuPrint CP105b using an open-source HBPLv1 driver, CUPS, and AirPrint.">
+
+
+
+    
+    
+      <link rel="icon" type="image/x-icon" href="https://www.cozycafecorner.com/favicon.ico" />
+    
+
+    
+
+    
+
+    
+
+    
+      <link rel="manifest" href="https://www.cozycafecorner.com/site.webmanifest" />
+    
+
+    
+
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    
+    
+    
+      
+        
+          
+          
+            <link
+              rel="stylesheet"
+              href="/css/styles.6f3f3adb729829e2159d0016639d6022e9aa52454862e4d0392efd5245c6bc45.css"
+              integrity="sha256-bz8623KYKeIVnQAWY51gIumqUkVIYuTQOS79UkXGvEU="
+              crossorigin="anonymous"
+            />
+          
+        
+      
+    
+
+
+    
+    
+      
+        
+        
+          <link rel="stylesheet" href="/css/fonts.6777448b727bc66b52b18a918eab1ed6ac27e614b722b47ff58b488288728b50.css" integrity="sha256-Z3dEi3J7xmtSsYqRjqse1qwn5hS3IrR/9YtIgohyi1A=" crossorigin="anonymous" />
+        
+      
+    
+
+
+    
+        
+      
+      <script src="/js/main.7b57960741aab0c5345ed2de96e3271beece68496732534388fb608dad5f5490.min.js" defer></script>
+    
+
+    <link rel="canonical" href="https://www.cozycafecorner.com/post/2026-10-23-cupsprinter/">
+    
+  </head>
+  <body class="">
+    <div class="flex min-h-screen flex-col">
+      <nav class="">
+  <div class="container mx-auto flex items-center justify-between px-4 py-6">
+    <a class="flex items-center" href="https://www.cozycafecorner.com/">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<img
+  src="https://www.cozycafecorner.com/images/logo.png"
+  width="500"
+  height="500"
+  
+  
+  class="size-6 xl:size-8"
+  alt="map[class:size-6 xl:size-8 src:images/logo.png]"
+/>
+
+      <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+    </a>
+    <button
+      class="cursor-pointer xl:hidden"
+      type="button"
+      data-toggle-target="#navbarContent"
+      data-toggle-class="-translate-y-full"
+      aria-label="Toggle Navigation"
+    >
+      <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+  />
+</svg>
+
+
+    </button>
+    <div
+      class="fixed inset-0 flex -translate-y-full flex-col items-center justify-center gap-8 bg-white duration-500 xl:relative xl:translate-y-0 xl:flex-row"
+      id="navbarContent"
+    >
+      <div class="container absolute top-0 mx-auto flex items-center justify-between px-4 py-6 xl:hidden">
+        <a class="flex items-center xl:hidden" href="https://www.cozycafecorner.com/">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<img
+  src="https://www.cozycafecorner.com/images/logo.png"
+  width="500"
+  height="500"
+  
+  
+  class="size-6 xl:size-8"
+  alt="map[class:size-6 xl:size-8 src:images/logo.png]"
+/>
+
+          <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+        </a>
+        <button
+          class="cursor-pointer xl:hidden"
+          type="button"
+          data-toggle-target="#navbarContent"
+          data-toggle-class="-translate-y-full"
+          aria-label="Toggle Navigation"
+        >
+          <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
+
+        </button>
+      </div>
+      <ul class="flex flex-col gap-8 xl:flex-row">
+        
+          <li class="text-center">
+            <a class="text-primary" href="/#hero/">Home</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/services/services/">Services</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/blog/">Blog</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/about/about/">About</a>
+          </li>
+        
+      </ul>
+      <ul class="flex flex-col gap-8 xl:flex-row">
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      <div class="grow">
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      
+        <h2 class="text-primary mb-16 text-center text-6xl font-bold">Reviving an Old Fuji-Xerox Printer with Linux, CUPS, and AirPrint</h2>
+      
+      
+        <p class="mx-auto mb-16 text-center xl:max-w-[50%]">How I turned a 2012 Mac mini into a Linux print server for a Fuji-Xerox DocuPrint CP105b using an open-source HBPLv1 driver, CUPS, and AirPrint.</p>
+      
+      
+        <div class="prose prose-lg mx-auto">
+          <p>Sometimes, an old piece of hardware becomes difficult to use not because it is broken, but because its software support has disappeared.</p>
+<p>That was exactly the situation with my Fuji-Xerox DocuPrint CP105b color laser printer.</p>
+<p>I originally chose this printer because it offered good value for money. It was an affordable color laser printer that met my needs, and I didn&rsquo;t expect it to become a problem years later.</p>
+<p>What I overlooked was the printer language it used: <strong>HBPLv1.0</strong>.</p>
+<p>After experimenting with different ways to keep the printer useful, I eventually found a solution that gave both the printer and my old 2012 Mac mini a new purpose.</p>
+<p>I installed Linux on the Mac mini, compiled an open-source printer driver, and configured CUPS to share the printer over my home network. I also got AirPrint working, allowing supported Apple devices to discover and use the printer without installing the original manufacturer driver on each device.</p>
+<p>Here is how I approached the problem.</p>
+<h2 id="1-the-hidden-cost-of-choosing-an-inexpensive-printer">1. The hidden cost of choosing an inexpensive printer</h2>
+<p>When I bought the Fuji-Xerox DocuPrint CP105b, my main consideration was value for money.</p>
+<p>At the time, it was a practical choice. However, I didn&rsquo;t pay much attention to the printer&rsquo;s underlying printing language.</p>
+<p>Unlike printers that support widely used page description languages or modern driverless printing standards, the CP105b uses <strong>Host Based Printer Language version 1 (HBPLv1)</strong>.</p>
+<p>This matters because the printer depends on software to convert documents into a format it understands.</p>
+<p>The open-source <a href="https://github.com/macos2/HBPLv1.0_Plus-Printer-driver">HBPLv1.0 Plus Printer Driver</a> explicitly lists the Fuji-Xerox DocuPrint CP105b among its supported models.</p>
+<p>Without a compatible driver, having a working USB connection is not enough. The computer still needs a way to translate a document into the printer&rsquo;s language.</p>
+<p>In other words, the printer itself was still usable. The problem was the software required to communicate with it.</p>
+<p>Looking back, I learned that the purchase price of a printer is only part of its long-term cost. Driver availability and support for future operating systems matter too.</p>
+<h2 id="2-why-i-stopped-relying-on-macos">2. Why I stopped relying on macOS</h2>
+<p>For a while, my 2012 Mac mini running macOS Catalina (10.15) remained useful because it could still run the old printer driver.</p>
+<p>However, this solution had several limitations.</p>
+<h3 id="the-old-mac-mini-could-print-but-not-conveniently-share-the-printer">The old Mac mini could print, but not conveniently share the printer</h3>
+<p>The printer worked locally on the Mac mini, but I couldn&rsquo;t get the cross-device printing experience I wanted with the available driver setup.</p>
+<p>If I needed to print something from another computer, the practical workaround was to copy the file to the Mac mini and print it locally.</p>
+<p>That was inconvenient, especially for a printer that should ideally be available to every device on my home network.</p>
+<h3 id="modern-software-support-was-disappearing">Modern software support was disappearing</h3>
+<p>The Mac mini was also becoming less useful as a general-purpose computer.</p>
+<p>macOS Catalina was too old for many of the newer applications and services I wanted to use. Keeping the machine running primarily to support one printer no longer seemed like a good use of the hardware.</p>
+<h3 id="the-driver-situation-was-getting-worse">The driver situation was getting worse</h3>
+<p>Newer Apple Silicon Macs also presented a problem: I couldn&rsquo;t rely on a current manufacturer-provided driver for this legacy printer.</p>
+<p>The manufacturer no longer maintains the product in the way it once did, and I couldn&rsquo;t count on receiving a new driver for newer macOS releases.</p>
+<p>I didn&rsquo;t want to replace a printer that was still working simply because its software support had become obsolete.</p>
+<p>I needed a different approach.</p>
+<h2 id="3-finding-an-open-source-hbplv1-driver">3. Finding an open-source HBPLv1 driver</h2>
+<p>The turning point was finding the <a href="https://github.com/macos2/HBPLv1.0_Plus-Printer-driver">HBPLv1.0 Plus Printer Driver on GitHub</a>.</p>
+<p>This project provides a Linux driver for printers that use HBPLv1.0, including the DocuPrint CP105b.</p>
+<p>The driver converts print data into the format required by the printer and integrates with CUPS.</p>
+<p>The Plus version also includes several useful improvements, such as printer wake-up support, manual duplex printing, additional print-quality options, and configurable installation paths.</p>
+<p>The repository provides a build process using standard tools such as <code>gcc</code> and <code>make</code>. It also requires <code>liblcms2-utils</code> for the <code>psicc</code> utility used to process the driver&rsquo;s color profile files.</p>
+<p>This was exactly the kind of solution I was looking for: an open-source project that could keep my existing hardware useful without depending on a new proprietary driver.</p>
+<h2 id="4-turning-the-mac-mini-into-a-linux-print-server">4. Turning the Mac mini into a Linux print server</h2>
+<p>I had already decided to repurpose the 2012 Mac mini as a Linux server.</p>
+<p>Instead of keeping macOS Catalina solely for printing, I installed Debian 13.7 (Trixie) and used the machine as a dedicated print server.</p>
+<p>The printer connects to the Mac mini through USB. The Mac mini handles the driver, print queue, and network sharing.</p>
+<p>The basic software components are:</p>
+<ul>
+<li><strong>CUPS</strong> — manages printer queues and print jobs.</li>
+<li><strong>HBPLv1.0 Plus driver</strong> — converts documents into a format the CP105b understands.</li>
+<li><strong>Avahi</strong> — provides local network service discovery through mDNS/DNS-SD, which is important for Bonjour and AirPrint discovery.</li>
+</ul>
+<p>This setup separates the printer hardware from the computers that use it. Client devices send print jobs to the Linux server, and the server handles the printer-specific work.</p>
+<h2 id="5-installing-cups-and-the-build-dependencies">5. Installing CUPS and the build dependencies</h2>
+<p>After installing Debian, I installed CUPS, the tools required to compile the driver, and the packages needed for service discovery.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo apt install <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  git <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  build-essential <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  autoconf <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  automake <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  libtool <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  pkg-config <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  liblcms2-utils <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  cups <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  cups-filters <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  cups-ipp-utils <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  avahi-daemon <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  avahi-utils
+</span></span></code></pre></div><p>The main packages have different responsibilities:</p>
+<ul>
+<li><code>build-essential</code> provides the compiler and standard build tools.</li>
+<li><code>git</code> downloads the driver source code.</li>
+<li><code>liblcms2-utils</code> provides <code>psicc</code>, which the driver uses for color profile processing.</li>
+<li><code>cups</code> provides the printing system and administration interface.</li>
+<li><code>cups-filters</code> provides additional document-processing filters.</li>
+<li><code>cups-ipp-utils</code> provides useful IPP diagnostic utilities.</li>
+<li><code>avahi-daemon</code> and <code>avahi-utils</code> support local network discovery.</li>
+</ul>
+<p>I then checked that the printer was detected over USB:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lsusb
+</span></span></code></pre></div><p>The output identified the device as:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>0550:00f5 Fuji Xerox Co., Ltd DocuPrint CP105 b
+</span></span></code></pre></div><p>This confirmed that the operating system could see the printer at the USB level.</p>
+<p>It was an important first check, but it didn&rsquo;t yet prove that printing would work. The driver and CUPS configuration still needed to be installed.</p>
+<h2 id="6-compiling-and-installing-the-driver">6. Compiling and installing the driver</h2>
+<p>I downloaded the source code from the project repository:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/macos2/HBPLv1.0_Plus-Printer-driver.git
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cd HBPLv1.0_Plus-Printer-driver
+</span></span></code></pre></div><p>The repository includes a <code>makefile</code> and a <code>configure</code> script. Because the default installation path is <code>/usr</code>, I could use the default configuration.</p>
+<p>I compiled and installed the driver:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make
+</span></span><span style="display:flex;"><span>sudo make install
+</span></span></code></pre></div><p>The <code>make</code> command compiled the driver, while <code>make install</code> installed the driver components and printer description files.</p>
+<p>The project includes PPD files under its <code>ppd</code> directory. These files describe the printer&rsquo;s capabilities and tell CUPS which driver and print options to use.</p>
+<p>After installation, the next step was to create a CUPS printer queue using the appropriate installed PPD.</p>
+<p>The key point is that installing the driver alone doesn&rsquo;t automatically create a working printer queue. CUPS still needs to know which physical device to use and which driver to apply to it.</p>
+<p>For reference, the source project documents the build process and installation options here:</p>
+<p><a href="https://github.com/macos2/HBPLv1.0_Plus-Printer-driver">HBPLv1.0 Plus Printer Driver — README</a></p>
+<h2 id="7-adding-the-printer-to-cups">7. Adding the printer to CUPS</h2>
+<p>Once the driver was installed, I configured the printer in CUPS.</p>
+<p>The CUPS web interface was available at:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>http://localhost:631
+</span></span></code></pre></div><p>From the administration interface, I added the USB-connected Fuji-Xerox printer and selected the corresponding PPD installed by the driver.</p>
+<p>The printer queue was named:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Fuji_Xerox_CP105
+</span></span></code></pre></div><p>After completing the configuration, I sent a CUPS test page to the printer.</p>
+<p><strong>The test page printed successfully.</strong></p>
+<p>That was the most important milestone in the project. It confirmed that the operating system, USB connection, CUPS queue, and HBPLv1 driver were working together.</p>
+<p>At this point, the printer was usable from the server itself. The remaining task was to make it accessible to other devices on the network.</p>
+<h2 id="8-sharing-the-printer-over-the-network">8. Sharing the printer over the network</h2>
+<p>CUPS supports sharing a locally connected printer with other computers.</p>
+<p>I enabled printer sharing and marked the queue as shared:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo cupsctl --share-printers
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo lpadmin <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -p Fuji_Xerox_CP105 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -o printer-is-shared<span style="color:#f92672">=</span>true
+</span></span></code></pre></div><p>These commands enable CUPS printer sharing and mark the specified queue for sharing.</p>
+<p>CUPS uses IPP for network printing. This means compatible client devices can send print jobs to the Linux server rather than communicating directly with the USB printer.</p>
+<p>I also verified that the CUPS service was advertising on the local network. The server was using the address <code>192.168.2.6</code> and the standard CUPS port, <code>631</code>.</p>
+<p>The printer was no longer limited to applications running directly on the Mac mini.</p>
+<p>Instead, it could be presented as a shared printer for other devices on the same local network.</p>
+<p>For more information, see the <a href="https://www.cups.org/doc/sharing.html">CUPS printer-sharing documentation</a>.</p>
+<h2 id="9-enabling-airprint-discovery">9. Enabling AirPrint discovery</h2>
+<p>Network printing is useful, but I also wanted the printer to be convenient for iPhones, iPads, and Macs.</p>
+<p>That&rsquo;s where Bonjour and AirPrint come in.</p>
+<p>CUPS manages the print queue and the printer driver. Avahi provides local network service discovery through mDNS/DNS-SD, allowing compatible clients to discover advertised services without manually entering an IP address.</p>
+<p>In my setup, Avahi was installed alongside CUPS, and the shared printer became discoverable through the local network&rsquo;s service discovery mechanism.</p>
+<p>This allowed the printer to be used through AirPrint-compatible client devices.</p>
+<p>The important distinction is that <strong>AirPrint discovery and printer-language support are two different things</strong>.</p>
+<p>AirPrint makes the printer easier to discover and use from supported devices. The HBPLv1 driver on the Linux server still performs the printer-specific conversion needed by the CP105b.</p>
+<p>Together, these components bridge the gap between modern client devices and an older USB printer.</p>
+<h2 id="10-the-result-a-printer-that-works-across-the-network">10. The result: a printer that works across the network</h2>
+<p>After compiling the driver, creating the CUPS queue, and configuring printer sharing, the original problem was solved.</p>
+<p>The Fuji-Xerox DocuPrint CP105b could now be used as a shared network printer rather than requiring me to copy files to the old Mac mini and print locally.</p>
+<p>The new arrangement has several advantages:</p>
+<ul>
+<li>I can keep using a printer that still works.</li>
+<li>I no longer need to log in to macOS Catalina just to print.</li>
+<li>Other devices can access the shared printer over the local network.</li>
+<li>Compatible Apple devices can discover it through AirPrint.</li>
+<li>The Mac mini now runs a useful Linux service instead of being dedicated to an obsolete desktop operating system.</li>
+</ul>
+<p>The hardware hasn&rsquo;t changed. The difference is the software architecture around it.</p>
+<h2 id="11-what-i-learned-from-this-project">11. What I learned from this project</h2>
+<p>This project reminded me that hardware can outlast the software ecosystem that originally supported it.</p>
+<p>When I bought the CP105b, I focused on its price and capabilities. I didn&rsquo;t consider how much its long-term usability would depend on a proprietary printer language and manufacturer driver support.</p>
+<p>The printer eventually became difficult to use not because the hardware had failed, but because the original software support was no longer a practical option.</p>
+<p>Linux, CUPS, and an open-source driver provided a way forward.</p>
+<p>The 2012 Mac mini also turned out to be a good fit for the job. It doesn&rsquo;t need a graphical desktop or modern desktop applications to act as a print server. It only needs to run a few lightweight services reliably.</p>
+<p>Most importantly, this wasn&rsquo;t just about keeping old hardware alive. It was about making it more convenient to use than before.</p>
+<p>A printer that once required local operation on an aging Mac can now be shared across the home network, including with compatible Apple devices.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Choosing an inexpensive printer seemed like a good decision at the time, but I underestimated the long-term importance of driver support.</p>
+<p>Fortunately, the CP105b uses a printing language for which an open-source Linux driver exists.</p>
+<p>By repurposing my old Mac mini, compiling the HBPLv1.0 Plus driver, and configuring CUPS and Avahi, I turned an aging local printing setup into a shared network printing service with AirPrint support.</p>
+<p>It&rsquo;s a small home-lab project, but it demonstrates something I find valuable about Linux and open source: when official support disappears, a community-maintained solution can sometimes extend the useful life of hardware for years.</p>
+<p>My old Mac mini now has a clear purpose, and my old Fuji-Xerox printer is once again a convenient part of my home network.</p>
+
+        </div>
+      
+    </div>
+  </section>
+</div>
+      <footer class="bg-tertiary/25 py-16">
+  <div class="container mx-auto px-4">
+    <div class="mb-8 grid gap-8 xl:grid-cols-12">
+      <div class="flex flex-col items-center gap-4 xl:col-span-4 xl:items-start">
+        <a class="flex items-center" href="https://www.cozycafecorner.com/">
+          <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+        </a>
+        <p class="text-center text-sm xl:text-start">Specializing in IT solutions, web development, and infrastructure maintenance for your business.</p>
+        
+      </div>
+      <div class="xl:col-span-2">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">About us</h2>
+        <ul class="flex flex-col gap-1 text-sm">
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/#hero">Home</a>
+            </li>
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/services/services/">Services</a>
+            </li>
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/blog/">Blog</a>
+            </li>
+          
+        </ul>
+      </div>
+      <div class="xl:col-span-3">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">Location</h2>
+        <ul class="flex flex-col gap-3 text-sm">
+          
+            <li class="flex flex-col items-center gap-4 xl:flex-row">
+              <span class="text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg>
+</span>
+              <span class="text-center xl:text-start">Richmond, BC, Canada</span>
+            </li>
+          
+        </ul>
+      </div>
+      <div class="xl:col-span-3">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">Contact Us</h2>
+        <ul class="flex flex-col gap-1 text-sm">
+          
+            <li class="text-center xl:text-start">jerrysun.work@hotmail.com</li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-sm">
+      <div class="">
+        
+          <p class="">© 2026 Cozy Cafe Corner All Rights Reserved</p>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>
