@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Uptime Kuma on Cozy Cafe Corner</title>
+		<link>https://www.cozycafecorner.com/tags/uptime-kuma/</link>
+		<description>Recent content in Uptime Kuma on Cozy Cafe Corner</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 15 Nov 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://www.cozycafecorner.com/tags/uptime-kuma/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Building a More Resilient Home Lab with Ansible and Uptime Kuma</title>
+				<link>https://www.cozycafecorner.com/post/2026-11-10-ansible-and-uptimekuma/</link>
+				<pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/post/2026-11-10-ansible-and-uptimekuma/</guid>
+				<description>&lt;h2 id=&#34;from-manual-maintenance-to-automation&#34;&gt;From Manual Maintenance to Automation&lt;/h2&gt;&#xA;&lt;p&gt;Over the past few months, my home lab has gradually grown from a few devices into a small environment with multiple systems and services.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

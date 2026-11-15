@@ -10,9 +10,65 @@
 		
 		
 		
-			<lastBuildDate>Fri, 23 Oct 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Sun, 15 Nov 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://www.cozycafecorner.com/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Ansible</title>
+				<link>https://www.cozycafecorner.com/tags/ansible/</link>
+				<pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/ansible/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Automation</title>
+				<link>https://www.cozycafecorner.com/tags/automation/</link>
+				<pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/automation/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Debian</title>
+				<link>https://www.cozycafecorner.com/tags/debian/</link>
+				<pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/debian/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Docker</title>
+				<link>https://www.cozycafecorner.com/tags/docker/</link>
+				<pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/docker/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Home Lab</title>
+				<link>https://www.cozycafecorner.com/tags/home-lab/</link>
+				<pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/home-lab/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Index</title>
+				<link>https://www.cozycafecorner.com/tags/index/</link>
+				<pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/index/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Linux</title>
+				<link>https://www.cozycafecorner.com/tags/linux/</link>
+				<pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/linux/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Uptime Kuma</title>
+				<link>https://www.cozycafecorner.com/tags/uptime-kuma/</link>
+				<pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.cozycafecorner.com/tags/uptime-kuma/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>AirPrint</title>
 				<link>https://www.cozycafecorner.com/tags/airprint/</link>
@@ -25,27 +81,6 @@
 				<link>https://www.cozycafecorner.com/tags/cups/</link>
 				<pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
 				<guid>https://www.cozycafecorner.com/tags/cups/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Debian</title>
-				<link>https://www.cozycafecorner.com/tags/debian/</link>
-				<pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
-				<guid>https://www.cozycafecorner.com/tags/debian/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Index</title>
-				<link>https://www.cozycafecorner.com/tags/index/</link>
-				<pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
-				<guid>https://www.cozycafecorner.com/tags/index/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Linux</title>
-				<link>https://www.cozycafecorner.com/tags/linux/</link>
-				<pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
-				<guid>https://www.cozycafecorner.com/tags/linux/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -112,13 +147,6 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Docker</title>
-				<link>https://www.cozycafecorner.com/tags/docker/</link>
-				<pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-				<guid>https://www.cozycafecorner.com/tags/docker/</guid>
-				<description></description>
-			</item>
-			<item>
 				<title>File Server</title>
 				<link>https://www.cozycafecorner.com/tags/file-server/</link>
 				<pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
@@ -140,13 +168,6 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Home Lab</title>
-				<link>https://www.cozycafecorner.com/tags/home-lab/</link>
-				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://www.cozycafecorner.com/tags/home-lab/</guid>
-				<description></description>
-			</item>
-			<item>
 				<title>System Administration</title>
 				<link>https://www.cozycafecorner.com/tags/system-administration/</link>
 				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
@@ -165,13 +186,6 @@
 				<link>https://www.cozycafecorner.com/tags/it-infrastructure/</link>
 				<pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
 				<guid>https://www.cozycafecorner.com/tags/it-infrastructure/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Automation</title>
-				<link>https://www.cozycafecorner.com/tags/automation/</link>
-				<pubDate>Sun, 12 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>https://www.cozycafecorner.com/tags/automation/</guid>
 				<description></description>
 			</item>
 			<item>

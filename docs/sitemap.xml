@@ -2,25 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.cozycafecorner.com/tags/ansible/</loc>
+    <lastmod>2026-11-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/automation/</loc>
+    <lastmod>2026-11-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/post/</loc>
+    <lastmod>2026-11-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/post/2026-11-10-ansible-and-uptimekuma/</loc>
+    <lastmod>2026-11-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/</loc>
+    <lastmod>2026-11-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/debian/</loc>
+    <lastmod>2026-11-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/docker/</loc>
+    <lastmod>2026-11-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/home-lab/</loc>
+    <lastmod>2026-11-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/index/</loc>
+    <lastmod>2026-11-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/linux/</loc>
+    <lastmod>2026-11-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/</loc>
+    <lastmod>2026-11-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cozycafecorner.com/tags/uptime-kuma/</loc>
+    <lastmod>2026-11-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.cozycafecorner.com/tags/airprint/</loc>
     <lastmod>2026-10-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.cozycafecorner.com/post/</loc>
-    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.cozycafecorner.com/</loc>
-    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.cozycafecorner.com/tags/cups/</loc>
-    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.cozycafecorner.com/tags/debian/</loc>
-    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.cozycafecorner.com/tags/index/</loc>
-    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.cozycafecorner.com/tags/linux/</loc>
     <lastmod>2026-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cozycafecorner.com/tags/mac-mini/</loc>
@@ -33,9 +54,6 @@
     <lastmod>2026-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cozycafecorner.com/post/2026-10-23-cupsprinter/</loc>
-    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.cozycafecorner.com/tags/</loc>
     <lastmod>2026-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cozycafecorner.com/tags/ubuntu/</loc>
@@ -59,9 +77,6 @@
     <loc>https://www.cozycafecorner.com/tags/omarchy/</loc>
     <lastmod>2026-09-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.cozycafecorner.com/tags/docker/</loc>
-    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.cozycafecorner.com/tags/file-server/</loc>
     <lastmod>2026-09-03T00:00:00+00:00</lastmod>
   </url><url>
@@ -73,9 +88,6 @@
   </url><url>
     <loc>https://www.cozycafecorner.com/tags/print-server/</loc>
     <lastmod>2026-09-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.cozycafecorner.com/tags/home-lab/</loc>
-    <lastmod>2026-08-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cozycafecorner.com/post/2026-08-06-installubuntuinmacos/</loc>
     <lastmod>2026-08-06T00:00:00+00:00</lastmod>
@@ -91,9 +103,6 @@
   </url><url>
     <loc>https://www.cozycafecorner.com/tags/it-infrastructure/</loc>
     <lastmod>2026-07-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.cozycafecorner.com/tags/automation/</loc>
-    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cozycafecorner.com/tags/ci/cd/</loc>
     <lastmod>2026-07-12T00:00:00+00:00</lastmod>

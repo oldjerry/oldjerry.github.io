@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    
+      <title>Building a More Resilient Home Lab with Ansible and Uptime Kuma | Cozy Cafe Corner</title>
+    
+
+
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+    
+    
+      
+    
+    <meta name="description" content="" />
+
+    
+    
+    <meta property="og:url" content="https://www.cozycafecorner.com/post/2026-11-10-ansible-and-uptimekuma/">
+	<meta property="og:site_name" content="Cozy Cafe Corner">
+	<meta property="og:title" content="Building a More Resilient Home Lab with Ansible and Uptime Kuma">
+	<meta property="og:description" content="From Manual Maintenance to Automation Over the past few months, my home lab has gradually grown from a few devices into a small environment with multiple systems and services.">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="post">
+		<meta property="article:published_time" content="2026-11-15T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-11-15T00:00:00+00:00">
+		<meta property="article:tag" content="Ansible">
+		<meta property="article:tag" content="Uptime Kuma">
+		<meta property="article:tag" content="Debian">
+		<meta property="article:tag" content="Linux">
+		<meta property="article:tag" content="Docker">
+		<meta property="article:tag" content="Home Lab">
+		<meta property="og:image" content="https://www.cozycafecorner.com/images/hero-image.png">
+
+    
+	<meta itemprop="name" content="Building a More Resilient Home Lab with Ansible and Uptime Kuma">
+	<meta itemprop="description" content="From Manual Maintenance to Automation Over the past few months, my home lab has gradually grown from a few devices into a small environment with multiple systems and services.">
+	<meta itemprop="datePublished" content="2026-11-15T00:00:00+00:00">
+	<meta itemprop="dateModified" content="2026-11-15T00:00:00+00:00">
+	<meta itemprop="wordCount" content="1203">
+	<meta itemprop="image" content="https://www.cozycafecorner.com/images/hero-image.png">
+	<meta itemprop="keywords" content="Ansible,Uptime Kuma,Debian,Linux,Docker,Home Lab,Automation">
+    
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://www.cozycafecorner.com/images/hero-image.png">
+	<meta name="twitter:title" content="Building a More Resilient Home Lab with Ansible and Uptime Kuma">
+	<meta name="twitter:description" content="From Manual Maintenance to Automation Over the past few months, my home lab has gradually grown from a few devices into a small environment with multiple systems and services.">
+
+
+
+    
+    
+      <link rel="icon" type="image/x-icon" href="https://www.cozycafecorner.com/favicon.ico" />
+    
+
+    
+
+    
+
+    
+
+    
+      <link rel="manifest" href="https://www.cozycafecorner.com/site.webmanifest" />
+    
+
+    
+
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    
+    
+    
+      
+        
+          
+          
+            <link
+              rel="stylesheet"
+              href="/css/styles.6f3f3adb729829e2159d0016639d6022e9aa52454862e4d0392efd5245c6bc45.css"
+              integrity="sha256-bz8623KYKeIVnQAWY51gIumqUkVIYuTQOS79UkXGvEU="
+              crossorigin="anonymous"
+            />
+          
+        
+      
+    
+
+
+    
+    
+      
+        
+        
+          <link rel="stylesheet" href="/css/fonts.6777448b727bc66b52b18a918eab1ed6ac27e614b722b47ff58b488288728b50.css" integrity="sha256-Z3dEi3J7xmtSsYqRjqse1qwn5hS3IrR/9YtIgohyi1A=" crossorigin="anonymous" />
+        
+      
+    
+
+
+    
+        
+      
+      <script src="/js/main.7b57960741aab0c5345ed2de96e3271beece68496732534388fb608dad5f5490.min.js" defer></script>
+    
+
+    <link rel="canonical" href="https://www.cozycafecorner.com/post/2026-11-10-ansible-and-uptimekuma/">
+    
+  </head>
+  <body class="">
+    <div class="flex min-h-screen flex-col">
+      <nav class="">
+  <div class="container mx-auto flex items-center justify-between px-4 py-6">
+    <a class="flex items-center" href="https://www.cozycafecorner.com/">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<img
+  src="https://www.cozycafecorner.com/images/logo.png"
+  width="500"
+  height="500"
+  
+  
+  class="size-6 xl:size-8"
+  alt="map[class:size-6 xl:size-8 src:images/logo.png]"
+/>
+
+      <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+    </a>
+    <button
+      class="cursor-pointer xl:hidden"
+      type="button"
+      data-toggle-target="#navbarContent"
+      data-toggle-class="-translate-y-full"
+      aria-label="Toggle Navigation"
+    >
+      <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+  />
+</svg>
+
+
+    </button>
+    <div
+      class="fixed inset-0 flex -translate-y-full flex-col items-center justify-center gap-8 bg-white duration-500 xl:relative xl:translate-y-0 xl:flex-row"
+      id="navbarContent"
+    >
+      <div class="container absolute top-0 mx-auto flex items-center justify-between px-4 py-6 xl:hidden">
+        <a class="flex items-center xl:hidden" href="https://www.cozycafecorner.com/">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<img
+  src="https://www.cozycafecorner.com/images/logo.png"
+  width="500"
+  height="500"
+  
+  
+  class="size-6 xl:size-8"
+  alt="map[class:size-6 xl:size-8 src:images/logo.png]"
+/>
+
+          <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+        </a>
+        <button
+          class="cursor-pointer xl:hidden"
+          type="button"
+          data-toggle-target="#navbarContent"
+          data-toggle-class="-translate-y-full"
+          aria-label="Toggle Navigation"
+        >
+          <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
+
+        </button>
+      </div>
+      <ul class="flex flex-col gap-8 xl:flex-row">
+        
+          <li class="text-center">
+            <a class="text-primary" href="/#hero/">Home</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/services/services/">Services</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/blog/">Blog</a>
+          </li>
+        
+          <li class="text-center">
+            <a class="text-primary" href="/about/about/">About</a>
+          </li>
+        
+      </ul>
+      <ul class="flex flex-col gap-8 xl:flex-row">
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      <div class="grow">
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      
+        <h2 class="text-primary mb-16 text-center text-6xl font-bold">Building a More Resilient Home Lab with Ansible and Uptime Kuma</h2>
+      
+      
+      
+        <div class="prose prose-lg mx-auto">
+          <h2 id="from-manual-maintenance-to-automation">From Manual Maintenance to Automation</h2>
+<p>Over the past few months, my home lab has gradually grown from a few devices into a small environment with multiple systems and services.</p>
+<p>My Raspberry Pi runs several services and Docker containers. Two routers handle different parts of my home network, while a NAS provides storage. I also have a 2012 Intel Mac mini running Debian, which has become a useful little server for various home lab projects.</p>
+<p>Everything works reasonably well, but managing these devices is becoming more complicated.</p>
+<p>Installing services, changing configurations, troubleshooting problems, and keeping everything running often require manual work. As the environment grows, I find myself spending more time maintaining it.</p>
+<p>This made me think about a different approach: instead of managing every device manually, why not build a more organized system for monitoring, automation, and recovery?</p>
+<p>That is the idea behind my new project: using <strong>Ansible and Uptime Kuma</strong> to manage and monitor my home lab.</p>
+<h2 id="learning-ansible-not-just-asking-ai-to-write-scripts">Learning Ansible, Not Just Asking AI to Write Scripts</h2>
+<p>One of my main reasons for starting this project is to learn Ansible and understand how automation works in real-world system administration.</p>
+<p>AI tools are very helpful. They can explain commands, generate scripts, and suggest solutions when something goes wrong. However, I don&rsquo;t want to simply ask AI to write everything and then copy and paste the results without understanding them.</p>
+<p>I want to understand the underlying concepts and how the tools actually work.</p>
+<p>For example, with Ansible, I want to become familiar with concepts such as inventory, playbooks, tasks, handlers, variables, and idempotency. More importantly, I want to understand how these components work together to manage multiple Linux systems consistently.</p>
+<p>The goal is to turn repetitive manual operations into predictable and repeatable processes.</p>
+<p>I see AI as a learning assistant rather than a replacement for understanding. It can help me explore unfamiliar technologies and solve problems, but I still want to know what a script does, why it works, and what could happen if something goes wrong.</p>
+<p>After all, using AI should help us understand more, not think less.</p>
+<h2 id="why-recovery-matters-more-than-i-initially-thought">Why Recovery Matters More Than I Initially Thought</h2>
+<p>Another important reason for this project is to improve the recovery capability of my home lab.</p>
+<p>Take my Raspberry Pi as an example. It has been running for around five years. During that time, I gradually installed and configured different services, added Docker containers, adjusted settings, and made various improvements based on actual usage.</p>
+<p>Some services also depend on an external USB hard drive connected to the Pi.</p>
+<p>This setup has worked well for years, but there is a weakness: much of the configuration and deployment history comes from manual work accumulated over time.</p>
+<p>Imagine the external hard drive suddenly fails.</p>
+<p>Or perhaps the Raspberry Pi itself develops a hardware problem.</p>
+<p>Even if I replace the damaged hardware, rebuilding the environment could take a considerable amount of time. I might need to reinstall the operating system, set up Docker again, redeploy multiple services, restore configurations, and troubleshoot dependencies between them.</p>
+<p>Some of these steps were completed years ago. I may remember the general process, but I probably won&rsquo;t remember every command, configuration change, or adjustment.</p>
+<p>The problem is not simply replacing a failed disk or device. It is rebuilding an environment that has evolved through years of manual installation, troubleshooting, and optimization.</p>
+<p>This is where automation becomes valuable.</p>
+<p>I want to use Ansible to manage system configurations and automate service deployment. Combined with a proper backup strategy, this should make it much easier to rebuild the environment after an unexpected failure.</p>
+<p>Of course, automation and backup are not the same thing. Ansible can help recreate systems and configurations, but it cannot replace backups of important data. Data protection and recovery testing will also be important parts of this project.</p>
+<p>Ultimately, I want to reduce the amount of work required to recover my home lab, rather than having to remember and repeat everything manually.</p>
+<h2 id="turning-the-mac-mini-into-a-management-server">Turning the Mac mini into a Management Server</h2>
+<p>In my earlier posts, I documented the process of installing Ubuntu on my old 2012 Mac mini and exploring ways to give this hardware a second life.</p>
+<p>Since then, I have switched from Ubuntu to Debian.</p>
+<p>In my actual setup, Debian has provided better driver compatibility and stability on this older hardware, while keeping system overhead relatively low. It is a good fit for a machine with limited resources.</p>
+<p>The Mac mini is now doing more than simply running a few services.</p>
+<p>I have already installed Docker and deployed Uptime Kuma for monitoring. I also plan to use Ansible as the central automation tool for managing other devices in my home lab.</p>
+<p>Rather than installing management tools on every device, I want to use this Mac mini as a central place from which I can manage and monitor the environment.</p>
+<p>It is a practical way to make use of hardware that might otherwise have been left unused.</p>
+<h2 id="monitoring-alerting-and-automated-recovery">Monitoring, Alerting, and Automated Recovery</h2>
+<p>An important part of this project is bringing monitoring and automation together.</p>
+<p>Uptime Kuma will be responsible for monitoring the availability of devices and services. This includes the Raspberry Pi, routers, NAS, and important services running on them.</p>
+<p>When something becomes unavailable or a health check fails, I want to receive an alert as soon as possible.</p>
+<p>But simply knowing that something is wrong is not always enough.</p>
+<p>For certain predictable problems, I would also like to use scripts to perform predefined actions automatically. For example, a script might check a service and attempt a safe recovery action when specific conditions are met.</p>
+<p>For more complicated problems, the system should notify me so I can investigate manually.</p>
+<p>I don&rsquo;t believe every problem should be fixed automatically. Restarting a service or changing a network configuration without understanding the cause could sometimes make things worse.</p>
+<p>The important thing is to distinguish between problems that can be handled safely by automation and those that require human judgment.</p>
+<p>My longer-term goal is to build a workflow that connects several stages:</p>
+<ul>
+<li><strong>Monitoring:</strong> Check whether devices and services are running properly.</li>
+<li><strong>Alerting:</strong> Notify me when an important problem is detected.</li>
+<li><strong>Automation:</strong> Run predefined scripts for suitable recovery actions.</li>
+<li><strong>Deployment:</strong> Use Ansible to manage configurations and recreate services when necessary.</li>
+<li><strong>Recovery:</strong> Restore the environment with less manual effort after a hardware or system failure.</li>
+</ul>
+<p>This will take time to build and test, but it gives me a clear direction.</p>
+<h2 id="a-home-lab-that-is-easier-to-manage-and-recover">A Home Lab That Is Easier to Manage and Recover</h2>
+<p>I don&rsquo;t intend to build a complicated enterprise-style management platform for a few devices at home.</p>
+<p>What I want is something practical: a home lab that I understand, can maintain, and can recover without spending hours repeating old manual operations.</p>
+<p>This project is also an opportunity to learn more about Linux administration, Ansible, Docker, monitoring, and automation through real-world practice.</p>
+<p>I will document the process as I make progress, including the decisions, problems, and lessons learned along the way.</p>
+<p>For me, the goal is not to automate everything, but to make my home lab easier to understand, manage, and recover.</p>
+<p><strong>The best automation is not just about saving time when everything works. It is also about knowing what to do when something breaks.</strong></p>
+
+        </div>
+      
+    </div>
+  </section>
+</div>
+      <footer class="bg-tertiary/25 py-16">
+  <div class="container mx-auto px-4">
+    <div class="mb-8 grid gap-8 xl:grid-cols-12">
+      <div class="flex flex-col items-center gap-4 xl:col-span-4 xl:items-start">
+        <a class="flex items-center" href="https://www.cozycafecorner.com/">
+          <span class="text-primary text-xl font-semibold uppercase xl:text-3xl">Cozy Cafe Corner</span>
+        </a>
+        <p class="text-center text-sm xl:text-start">Specializing in IT solutions, web development, and infrastructure maintenance for your business.</p>
+        
+      </div>
+      <div class="xl:col-span-2">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">About us</h2>
+        <ul class="flex flex-col gap-1 text-sm">
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/#hero">Home</a>
+            </li>
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/services/services/">Services</a>
+            </li>
+          
+            <li class="text-center xl:text-start">
+              <a class="" href="/blog/">Blog</a>
+            </li>
+          
+        </ul>
+      </div>
+      <div class="xl:col-span-3">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">Location</h2>
+        <ul class="flex flex-col gap-3 text-sm">
+          
+            <li class="flex flex-col items-center gap-4 xl:flex-row">
+              <span class="text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg>
+</span>
+              <span class="text-center xl:text-start">Richmond, BC, Canada</span>
+            </li>
+          
+        </ul>
+      </div>
+      <div class="xl:col-span-3">
+        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">Contact Us</h2>
+        <ul class="flex flex-col gap-1 text-sm">
+          
+            <li class="text-center xl:text-start">jerrysun.work@hotmail.com</li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-sm">
+      <div class="">
+        
+          <p class="">© 2026 Cozy Cafe Corner All Rights Reserved</p>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>
